@@ -9,7 +9,7 @@
 - [ ] DESIGN_SYSTEM.md kararlarını temel stillere uygula
 - [x] Header ve responsive navigasyonu geliştir
 - [x] Hero bölümünü geliştir
-- [ ] Hizmetler bölümünü geliştir
+- [x] Hizmetler bölümünü geliştir
 - [ ] Neden Yalın Rota ve süreç bölümlerini geliştir
 - [ ] Fixora ve JobFit TR içeriklerini hazırla ve Seçilmiş Çalışmalar bölümünü geliştir
 - [ ] SSS, iletişim ve footer bölümlerini geliştir

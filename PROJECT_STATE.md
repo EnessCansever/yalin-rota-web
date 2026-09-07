@@ -16,15 +16,16 @@
 - Header ve responsive navigation geliştirildi
 - Hero bölümü geliştirildi
 - Header ve hero sonrasında TypeScript kontrolü ve production build başarılı oldu
+- Hizmetler bölümü geliştirildi
+- Hizmetler sonrasında TypeScript kontrolü ve production build başarılı oldu; mobil/masaüstü yerleşim kuralları kod üzerinden incelendi
 
 ## Current Task
 
-- Hizmetler bölümünün geliştirilmesi
+- Neden Yalın Rota ve çalışma süreci bölümlerinin geliştirilmesi
 
 ## Next
 
 - DESIGN_SYSTEM.md kararlarının temel başlangıç stilleri üzerine aşamalı olarak uygulanması
-- Hizmetler bölümünün geliştirilmesi
 - Neden Yalın Rota bölümünün geliştirilmesi
 - Süreç bölümünün geliştirilmesi
 - Fixora ve JobFit TR içeriklerinin hazırlanması ve Seçilmiş Çalışmalar bölümünün geliştirilmesi
@@ -64,10 +65,12 @@
 - Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
 - Hero görsel gerektirmeyen, sola hizalı ve tipografi ağırlıklı olacak
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Teknik kurulum, header ve hero tamamlandı; diğer ana sayfa bölümleri henüz geliştirilmedi
+- Teknik kurulum, header, hero ve hizmetler tamamlandı; diğer ana sayfa bölümleri henüz geliştirilmedi
 - React 19, TypeScript 7, Vite 8 ve Tailwind CSS 4 kuruldu; kesin bağımlılık sürümleri package-lock.json içinde tutuluyor
 - Tailwind CSS resmi @tailwindcss/vite eklentisiyle bağlandı; ayrı PostCSS veya Tailwind yapılandırma dosyası gerekmedi
-- Global CSS temel ayarlara ek olarak header, mobil menü, hero, ortak CTA ve görünür odak stillerini içeriyor
+- Global CSS temel ayarlara ek olarak header, mobil menü, hero, hizmetler, ortak CTA ve görünür odak stillerini içeriyor
+- Hizmetler Services.tsx içinde bir veri dizisinden map ile üretiliyor; mobilde tek kolon, 48rem ve üzerinde 2×2 grid kullanılıyor
+- Hizmetler bölümü hizmetler id'siyle mevcut header ve hero bağlantılarına bağlandı; bölüm H2, hizmet adları H3 olarak düzenlendi
 - Milestone 5 kullanıcı talebine göre menü Hizmetler, Çalışmalar, Süreç ve SSS bağlantılarından oluşuyor; CTA İletişime Geç
 - Milestone 5 hero başlığı İşletmenize yakışan bir web sitesi olarak uygulandı; Web & Dijital Çözümler üst metni kullanıldı
 - Header ve Hero ayrı bileşenlerde; menü tek bağlantı dizisi, useState ve odak yönetimi için useRef kullanıyor
@@ -77,6 +80,6 @@
 
 ## Known Issues
 
-- Hizmetler, çalışmalar, süreç, SSS ve iletişim hedef bölümleri henüz yok; bağlantılar kullanıcı talebiyle gelecekteki section id'lerine hazırlandı
+- Çalışmalar, süreç, SSS ve iletişim hedef bölümleri henüz yok; ilgili bağlantılar gelecekteki section id'lerine hazırlandı
 - Responsive kurallar kod üzerinden incelendi; tarayıcı test aracı kurulu olmadığından gerçek viewport ve klavye etkileşim testleri henüz yapılmadı
 - Fixora ve JobFit TR için açıklamalar, kurucunun katkısı, görseller ve varsa bağlantılar henüz paylaşılmadı; içerik hazırlanırken kullanıcıdan alınacak
