@@ -4,7 +4,8 @@
 - [x] Site bilgi mimarisini ve temel içerik akışını belirle
 - [x] Gerçek duruma uygun çalışmalar / referans yaklaşımını belirle
 - [x] Tasarım yönünü ve temel design system kararlarını belirle
-- [ ] React, TypeScript, Vite ve Tailwind CSS kurulumunu yap
+- [x] React, TypeScript, Vite ve Tailwind CSS kurulumunu yap
+- [x] İlk TypeScript, production build ve geliştirme sunucusu kontrollerini tamamla
 - [ ] DESIGN_SYSTEM.md kararlarını temel stillere uygula
 - [ ] Header ve navigasyonu geliştir
 - [ ] Hero ve hizmetler bölümlerini geliştir

@@ -9,15 +9,18 @@
 - GitHub repository oluşturuldu ve ilk proje dokümantasyonu push edildi
 - Site bilgi mimarisi ve içerik akışı belirlendi
 - Yalın Rota görsel yönü ve temel design system belirlendi
+- React + TypeScript + Vite frontend projesi oluşturuldu
+- Tailwind CSS yapılandırıldı
+- İlk production build doğrulandı
+- TypeScript kontrolü, geliştirme sunucusu ve temel .gitignore kuralları doğrulandı
 
 ## Current Task
 
-- React uygulamasının kurulması ve ilk arayüzün geliştirilmesi
+- Header ve hero bölümünün geliştirilmesi
 
 ## Next
 
-- React / TypeScript / Vite / Tailwind CSS projesinin kurulması
-- DESIGN_SYSTEM.md kararlarının temel stillere uygulanması
+- DESIGN_SYSTEM.md kararlarının temel başlangıç stilleri üzerine aşamalı olarak uygulanması
 - Header / navigation geliştirilmesi
 - Hero bölümünün geliştirilmesi
 - Hizmetler bölümünün geliştirilmesi
@@ -60,7 +63,12 @@
 - Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
 - Hero görsel gerektirmeyen, sola hizalı ve tipografi ağırlıklı olacak
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Tasarım kararları belirlendi; teknik kurulum ve tasarımın kodlanması henüz yapılmadı
+- Teknik kurulum tamamlandı; uygulamada yalnızca geçici Yalın Rota başlığı bulunuyor, ana sayfa bölümleri henüz geliştirilmedi
+- React 19, TypeScript 7, Vite 8 ve Tailwind CSS 4 kuruldu; kesin bağımlılık sürümleri package-lock.json içinde tutuluyor
+- Tailwind CSS resmi @tailwindcss/vite eklentisiyle bağlandı; ayrı PostCSS veya Tailwind yapılandırma dosyası gerekmedi
+- Global CSS yalnızca Tailwind importu, box-sizing, body margin, sistem fontu ve temel zemin/metin renklerini içeriyor
+- npm run build önce TypeScript kontrolünü, ardından production build işlemini çalıştırıyor; npm run dev ve npm run preview komutları mevcut
+- README ve Vite demo içerikleri oluşturulmadı; mevcut planlama belgeleri korundu
 
 ## Known Issues
 
