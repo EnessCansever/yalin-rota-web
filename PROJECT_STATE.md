@@ -6,23 +6,28 @@
 - @yalinrota Instagram hesabı oluşturuldu
 - Yalın Rota için ayrı Google hesabı oluşturuldu
 - Proje kuralları ve hafızası için AGENTS.md, BUSINESS.md, PROJECT_STATE.md ve TODO.md oluşturuldu
+- GitHub repository oluşturuldu ve ilk proje dokümantasyonu push edildi
+- Site bilgi mimarisi ve içerik akışı belirlendi
 
 ## Current Task
 
-- Yalın Rota kurumsal web sitesinin hazırlanması
+- Yalın Rota sitesinin teknik kurulumu ve tasarım yönünün hazırlanması
 
 ## Next
 
-- Site bilgi mimarisinin belirlenmesi
 - Tasarım yönünün belirlenmesi
 - React / Vite projesinin kurulması
 - Temel tasarım sisteminin oluşturulması
 - Header / navigation geliştirilmesi
 - Hero bölümünün geliştirilmesi
 - Hizmetler bölümünün geliştirilmesi
-- Çalışmalar / referans yaklaşımının hazırlanması
+- Neden Yalın Rota bölümünün geliştirilmesi
 - Süreç bölümünün geliştirilmesi
+- Fixora ve JobFit TR içeriklerinin hazırlanması ve Seçilmiş Çalışmalar bölümünün geliştirilmesi
+- Sık sorulan sorular bölümünün geliştirilmesi
 - İletişim alanının geliştirilmesi
+- Footer geliştirilmesi
+- Instagram ve yalinrota@gmail.com iletişim bağlantılarının doğrulanması
 - Responsive kontrol
 - Accessibility kontrol
 - SEO temelleri
@@ -45,7 +50,13 @@
 - Domain site yayınlanmaya hazır hale geldikten sonra satın alınacak
 - Geliştirme küçük milestone'larla ilerleyecek; sonraki aşama kullanıcının açık talebiyle başlayacak
 - Commit ve push işlemleri kullanıcı tarafından manuel yapılacak
+- İlk sürüm tek sayfalı olacak; bilgi mimarisi ve içerik taslakları SITE_PLAN.md içinde tutulacak
+- Güven/değer önerisi ve Neden Yalın Rota içeriği tek bölümde birleştirilecek
+- Seçilmiş Çalışmalar bölümünde kurucunun geliştirdiği Fixora ve JobFit TR sınırlı biçimde sunulacak; Yalın Rota müşteri işi olmadıkları açıkça belirtilecek
+- İlk sürüm iletişim kanalları Instagram @yalinrota ve e-posta yalinrota@gmail.com olacak
+- WhatsApp numarası henüz belirlenmedi; ilk sürümde zorunlu olmayacak ve uydurulmayacak
+- İlk sürümde iletişim formu kullanılmayacak
 
 ## Known Issues
 
-- Şimdilik bilinen problem yok
+- Fixora ve JobFit TR için açıklamalar, kurucunun katkısı, görseller ve varsa bağlantılar henüz paylaşılmadı; içerik hazırlanırken kullanıcıdan alınacak
