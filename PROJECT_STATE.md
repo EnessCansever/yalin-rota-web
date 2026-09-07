@@ -8,16 +8,16 @@
 - Proje kuralları ve hafızası için AGENTS.md, BUSINESS.md, PROJECT_STATE.md ve TODO.md oluşturuldu
 - GitHub repository oluşturuldu ve ilk proje dokümantasyonu push edildi
 - Site bilgi mimarisi ve içerik akışı belirlendi
+- Yalın Rota görsel yönü ve temel design system belirlendi
 
 ## Current Task
 
-- Yalın Rota sitesinin teknik kurulumu ve tasarım yönünün hazırlanması
+- React uygulamasının kurulması ve ilk arayüzün geliştirilmesi
 
 ## Next
 
-- Tasarım yönünün belirlenmesi
-- React / Vite projesinin kurulması
-- Temel tasarım sisteminin oluşturulması
+- React / TypeScript / Vite / Tailwind CSS projesinin kurulması
+- DESIGN_SYSTEM.md kararlarının temel stillere uygulanması
 - Header / navigation geliştirilmesi
 - Hero bölümünün geliştirilmesi
 - Hizmetler bölümünün geliştirilmesi
@@ -56,6 +56,11 @@
 - İlk sürüm iletişim kanalları Instagram @yalinrota ve e-posta yalinrota@gmail.com olacak
 - WhatsApp numarası henüz belirlenmedi; ilk sürümde zorunlu olmayacak ve uydurulmayacak
 - İlk sürümde iletişim formu kullanılmayacak
+- Görsel kararlar DESIGN_SYSTEM.md içinde tutulacak; açık nötr zemin ve tek accent olarak koyu petrol yeşili kullanılacak
+- Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
+- Hero görsel gerektirmeyen, sola hizalı ve tipografi ağırlıklı olacak
+- Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
+- Tasarım kararları belirlendi; teknik kurulum ve tasarımın kodlanması henüz yapılmadı
 
 ## Known Issues
 

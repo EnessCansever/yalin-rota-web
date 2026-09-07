@@ -3,9 +3,9 @@
 - [x] Proje kurallarını, ticari bağlamı ve proje hafızasını oluştur
 - [x] Site bilgi mimarisini ve temel içerik akışını belirle
 - [x] Gerçek duruma uygun çalışmalar / referans yaklaşımını belirle
-- [ ] Tasarım yönünü belirle
+- [x] Tasarım yönünü ve temel design system kararlarını belirle
 - [ ] React, TypeScript, Vite ve Tailwind CSS kurulumunu yap
-- [ ] Temel tasarım sistemini oluştur
+- [ ] DESIGN_SYSTEM.md kararlarını temel stillere uygula
 - [ ] Header ve navigasyonu geliştir
 - [ ] Hero ve hizmetler bölümlerini geliştir
 - [ ] Neden Yalın Rota ve süreç bölümlerini geliştir
