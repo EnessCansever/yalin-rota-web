@@ -7,8 +7,9 @@
 - [x] React, TypeScript, Vite ve Tailwind CSS kurulumunu yap
 - [x] İlk TypeScript, production build ve geliştirme sunucusu kontrollerini tamamla
 - [ ] DESIGN_SYSTEM.md kararlarını temel stillere uygula
-- [ ] Header ve navigasyonu geliştir
-- [ ] Hero ve hizmetler bölümlerini geliştir
+- [x] Header ve responsive navigasyonu geliştir
+- [x] Hero bölümünü geliştir
+- [ ] Hizmetler bölümünü geliştir
 - [ ] Neden Yalın Rota ve süreç bölümlerini geliştir
 - [ ] Fixora ve JobFit TR içeriklerini hazırla ve Seçilmiş Çalışmalar bölümünü geliştir
 - [ ] SSS, iletişim ve footer bölümlerini geliştir

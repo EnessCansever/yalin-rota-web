@@ -12,5 +12,374 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: #f7f8f5;
     color: #202b28;
+    line-height: 1.6;
+  }
+
+  :focus-visible {
+    outline: 3px solid #176b55;
+    outline-offset: 3px;
+  }
+}
+
+.page-container {
+  width: calc(100% - 2.5rem);
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.75rem 1.25rem;
+  background: #fff;
+  color: #176b55;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #d8dfda;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 4.5rem;
+  padding-block: 0.75rem;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #52605a;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-navigation {
+  display: none;
+  flex-basis: 100%;
+  min-width: 0;
+  padding-block: 0 0.25rem;
+}
+
+.header-navigation.is-open {
+  display: block;
+}
+
+.navigation-links a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-weight: 600;
+}
+
+.navigation-links a:hover {
+  color: #176b55;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #176b55;
+  border-radius: 0.5rem;
+  background: #176b55;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  transition: background-color 150ms, border-color 150ms;
+}
+
+.button-primary:hover,
+.button-primary:active {
+  background: #10513f;
+  border-color: #10513f;
+}
+
+.header-navigation > .button-primary {
+  width: auto;
+  min-height: 2.75rem;
+  padding: 0.625rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.hero {
+  padding-block: 3rem 4rem;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero-preview {
+  display: none;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d8dfda;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.preview-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #d8dfda;
+  background: #f7f8f5;
+}
+
+.preview-toolbar > span {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: #d8dfda;
+}
+
+.preview-address {
+  width: 55%;
+  height: 0.75rem;
+  margin-inline: auto;
+  border: 1px solid #d8dfda;
+  border-radius: 0.25rem;
+}
+
+.preview-page {
+  padding: 1.5rem;
+}
+
+.preview-header,
+.preview-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.preview-header {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #d8dfda;
+}
+
+.preview-brand {
+  width: 3rem;
+  height: 0.625rem;
+  background: #176b55;
+}
+
+.preview-nav span {
+  width: 1.25rem;
+  height: 0.25rem;
+  background: #d8dfda;
+}
+
+.preview-content {
+  padding-block: 2rem;
+}
+
+.preview-heading {
+  width: 80%;
+  height: 0.75rem;
+  margin-bottom: 0.625rem;
+  background: #52605a;
+}
+
+.preview-heading-short {
+  width: 55%;
+  margin-bottom: 1.25rem;
+}
+
+.preview-line {
+  width: 90%;
+  height: 0.375rem;
+  margin-bottom: 0.5rem;
+  background: #d8dfda;
+}
+
+.preview-line-short {
+  width: 70%;
+}
+
+.preview-button {
+  width: 4.5rem;
+  height: 1.5rem;
+  margin-top: 1.25rem;
+  border-radius: 0.25rem;
+  background: #176b55;
+}
+
+.preview-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.preview-blocks span {
+  height: 3.5rem;
+  border: 1px solid #d8dfda;
+  border-radius: 0.375rem;
+  background: #f7f8f5;
+}
+
+.hero-eyebrow {
+  margin-bottom: 1rem;
+  color: #176b55;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.hero h1 {
+  max-width: 50rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.hero-description {
+  max-width: 40rem;
+  margin-top: 1.5rem;
+  color: #52605a;
+  font-size: 1.125rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  color: #176b55;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.hero-secondary:hover {
+  color: #10513f;
+}
+
+@media (min-width: 30rem) {
+  .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 48rem) {
+  .page-container {
+    width: calc(100% - 4rem);
+  }
+
+  .hero {
+    padding-block: 4rem 5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .page-container {
+    width: calc(100% - 5rem);
+  }
+
+  .header-inner {
+    min-height: 5rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .header-navigation,
+  .header-navigation.is-open {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .navigation-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .navigation-links a {
+    min-height: 3rem;
+  }
+
+  .header-navigation > .button-primary {
+    width: auto;
+    min-height: 3rem;
+    padding: 0.75rem 1.25rem;
+    margin-top: 0;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-block: 4rem 4.5rem;
+  }
+
+  .hero-preview {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-primary {
+    transition: none;
   }
 }
