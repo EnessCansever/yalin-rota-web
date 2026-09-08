@@ -99,9 +99,17 @@ Dört beyaz kart; mobilde tek sütun, 768 px ve üzerinde iki sütun. Dört kart
 
 ### Neden Yalın Rota ve süreç
 
-Neden Yalın Rota beyaz bölüm zemini üzerinde; masaüstünde giriş ve çalışma ilkeleri iki sütunda, mobilde alt alta. İlkeler kart içine alınmaz; başlık ve kısa metin yeterli.
+Neden Yalın Rota, ana zemine yakın #F0F3EF nötr yüzey üzerinde; masaüstünde giriş ve çalışma ilkeleri iki sütunda, mobilde alt alta. Değer satırlarında ince sol çizgi ve küçük petrol yeşili işaret kullanılır; büyük kartlara dönüştürülmez.
 
-Süreç ana zeminde, 1–4 numaralarıyla düzenli liste. Mobilde tek sütun, tablette iki, masaüstünde dört sütun. Sayılar küçük accent metin olarak kullanılır; animasyonlu çizgi veya zaman tüneli gerekmez.
+Süreç ana zeminde, 01–04 numaralı daireleri ince dikey çizgiyle bağlanan sıralı liste. Her genişlikte adımlar yukarıdan aşağıya ilerler; 768 px ve üzerinde adım başlığı ve açıklaması yan yana, mobilde alt alta yer alır. Çizgi son adımdan sonra devam etmez; boş CSS pseudo-elementleriyle dekoratif olarak çizilir.
+
+### Interaction & Visual Rhythm
+
+- Bölümler hafif nötr yüzey farkları ve liste/timeline gibi farklı düzenlerle ayrışabilir; yeni baskın renkler eklenmez.
+- Why Us ve Process mikro etkileşimleri 160–220 ms aralığında, mevcut uygulamada 180 ms renk/yüzey geçişleridir. Hareket eklenirse en fazla 2 px; scale veya sürekli animasyon yok.
+- Hover efektleri yalnızca hover destekleyen hassas işaretçide uygulanır. İçerik ve sıra her zaman görünürdür; statik maddeler sırf efekt için odaklanabilir yapılmaz. Mevcut focus göstergeleri korunur.
+- Timeline bağlantıları dekoratiftir; anlam sıralı liste, numara ve başlıklardan gelir. Scroll-triggered JavaScript kullanılmaz.
+- prefers-reduced-motion etkin olduğunda geçişler kaldırılır; sonradan eklenen küçük hareketler de kapatılmalıdır.
 
 ### Seçilmiş Çalışmalar
 
