@@ -1,3 +1,7 @@
+import { useEffect, useRef, useState } from 'react'
+import fixoraScreenshot from '../assets/projects/fixora-analysis-result.png'
+import jobfitScreenshot from '../assets/projects/jobfit-analysis-dashboard.png'
+
 type Project = {
   id: string
   name: string
@@ -7,7 +11,10 @@ type Project = {
   technologies: string[]
   liveUrl: string
   githubUrl: string
-  visualVariant: 'fixora' | 'jobfit'
+  image: string
+  imageAlt: string
+  imageWidth: number
+  imageHeight: number
 }
 
 const projects: Project[] = [
@@ -20,7 +27,10 @@ const projects: Project[] = [
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'AI'],
     liveUrl: 'https://getfixora.dev',
     githubUrl: 'https://github.com/EnessCansever/fixora',
-    visualVariant: 'fixora',
+    image: fixoraScreenshot,
+    imageAlt: 'Fixora analiz sonucu ekranı',
+    imageWidth: 2552,
+    imageHeight: 1342,
   },
   {
     id: 'jobfit-tr',
@@ -31,11 +41,39 @@ const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Vite'],
     liveUrl: 'https://jobfit-tr.vercel.app/',
     githubUrl: 'https://github.com/EnessCansever/jobfit-tr',
-    visualVariant: 'jobfit',
+    image: jobfitScreenshot,
+    imageAlt: 'JobFit TR ilan uyumluluk ve başvuru takip ekranı',
+    imageWidth: 2546,
+    imageHeight: 1352,
   },
 ]
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const triggerRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => {
+    if (!selectedProject) return
+
+    const dialog = dialogRef.current
+    if (!dialog) return
+
+    const previousOverflow = document.body.style.overflow
+    const trigger = triggerRef.current
+    document.body.style.overflow = 'hidden'
+    // Native modal arka sayfayı etkileşime kapatır ve odağı içeride tutar.
+    dialog.showModal()
+    closeButtonRef.current?.focus()
+
+    return () => {
+      dialog.close()
+      document.body.style.overflow = previousOverflow
+      trigger?.focus({ preventScroll: true })
+    }
+  }, [selectedProject])
+
   return (
     <section id="calismalar" className="projects" aria-labelledby="projects-title" tabIndex={-1}>
       <div className="page-container">
@@ -49,7 +87,7 @@ export default function Projects() {
         </div>
         <div className="projects-list">
           {projects.map((project) => (
-            <article className={`project-showcase project-showcase--${project.visualVariant}`} key={project.id} aria-labelledby={`${project.id}-title`}>
+            <article className="project-showcase" key={project.id} aria-labelledby={`${project.id}-title`}>
               <div className="project-info">
                 <p className="project-type">{project.type}</p>
                 <h3 id={`${project.id}-title`}>{project.name}</h3>
@@ -70,42 +108,73 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
-              <figure className="project-visual">
-                {/* Gerçek ekran görüntüsü geldiğinde yalnızca bu dekoratif çerçeve değiştirilebilir. */}
-                <div className="project-browser" aria-hidden="true">
-                  <div className="project-browser-bar">
-                    <span /><span /><span />
-                    <p>{project.name}</p>
-                  </div>
-                  {project.visualVariant === 'fixora' ? (
-                    <div className="project-browser-body">
-                      <div className="project-error-line">
-                        <span className="project-code-mark">{'</>'}</span>
-                        <span>Hata mesajı</span>
-                      </div>
-                      <div className="project-flow-label">↓ Türkçe açıklama</div>
-                      <div className="project-analysis-block">
-                        <span className="project-placeholder-line" />
-                        <span className="project-placeholder-line project-placeholder-line--short" />
-                        <span className="project-placeholder-line" />
-                      </div>
-                      <div className="project-preview-tags"><span>Analiz geçmişi</span><span>Paylaşım</span></div>
-                    </div>
-                  ) : (
-                    <div className="project-browser-body">
-                      <div className="project-match-heading"><span className="project-match-symbol">↔</span><span>Beceri karşılaştırması</span></div>
-                      <div className="project-skill-row"><span>Eşleşen alanlar</span><span className="project-placeholder-line" /></div>
-                      <div className="project-skill-row"><span>Eksik alanlar</span><span className="project-placeholder-line project-placeholder-line--short" /></div>
-                      <div className="project-preview-tags"><span>İlan analizi</span><span>Başvuru takibi</span></div>
-                    </div>
-                  )}
-                </div>
-                <figcaption>Temsili arayüz · Gerçek ekran görüntüsü değildir</figcaption>
-              </figure>
+              <div className="project-visual">
+                <button
+                  className="project-screenshot-trigger"
+                  type="button"
+                  aria-label={`${project.name} ekran görüntüsünü büyüt`}
+                  aria-haspopup="dialog"
+                  onClick={(event) => {
+                    triggerRef.current = event.currentTarget
+                    setSelectedProject(project)
+                  }}
+                >
+                  <img
+                    className="project-screenshot"
+                    src={project.image}
+                    alt={project.imageAlt}
+                    width={project.imageWidth}
+                    height={project.imageHeight}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
             </article>
           ))}
         </div>
       </div>
+      <dialog
+        ref={dialogRef}
+        className="project-lightbox"
+        aria-modal="true"
+        aria-label={selectedProject?.imageAlt || 'Proje ekran görüntüsü'}
+        onKeyDown={(event) => {
+          // Modalın tek etkileşimli öğesi kapatma butonu; Tab odağı burada tutar.
+          if (event.key === 'Tab') {
+            event.preventDefault()
+            closeButtonRef.current?.focus()
+          }
+        }}
+        onCancel={(event) => {
+          event.preventDefault()
+          setSelectedProject(null)
+        }}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setSelectedProject(null)
+        }}
+      >
+        <div className="project-lightbox-frame">
+          <button
+            ref={closeButtonRef}
+            className="project-lightbox-close"
+            type="button"
+            aria-label="Görseli kapat"
+            onClick={() => setSelectedProject(null)}
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          {selectedProject && (
+            <img
+              className="project-lightbox-image"
+              src={selectedProject.image}
+              alt={selectedProject.imageAlt}
+              width={selectedProject.imageWidth}
+              height={selectedProject.imageHeight}
+            />
+          )}
+        </div>
+      </dialog>
     </section>
   )
 }

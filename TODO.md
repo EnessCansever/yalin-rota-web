@@ -19,8 +19,8 @@
 - [x] SEO temellerini tamamla
 - [x] README hazırla
 - [x] Milestone 10 TypeScript ve production build kontrolünü tamamla
-- [ ] Final visual polish
-- [ ] Replace Fixora and JobFit TR placeholder previews with selected real screenshots
+- [x] Projects final visual polish
+- [x] Replace Fixora and JobFit TR placeholder previews with selected real screenshots
 - [ ] Favicon / branding kontrolü: eksik favicon.ico isteğini ele al; logo ilk yayını bloke etmez
 - [ ] Gerçek Open Graph paylaşım görselini hazırla
 - [ ] Final browser QA: gerçek cihaz, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build

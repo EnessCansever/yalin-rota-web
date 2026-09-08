@@ -35,15 +35,15 @@
 - README hazırlandı
 - Milestone 10 TypeScript kontrolü ve production build doğrulandı; JS 210.08 kB (gzip 65.26 kB), CSS 19.75 kB (gzip 4.46 kB). Gereksiz paket, import veya Vite demo asset'i bulunmadı; mevcut UI korundu
 
+- Fixora ve JobFit TR gerçek proje screenshot’ları Vite asset import ile entegre edildi; temsili JSX/CSS ve visualVariant kaldırıldı
+- Projects görsel polish tamamlandı; TypeScript ve production build geçti. Chrome’da 320, 375, 430, 768, 1024 ve 1440 px görsel yüklenmesi, doğal oran, taşma, alt metin, dönüşümlü düzen, dış bağlantı öznitelikleri ve reduced-motion doğrulandı; yeni console hatası/uyarısı bulunmadı
+
 ## Current Task
 
-- Final visual polish and real project screenshot integration
+- Final branding, browser QA and deployment preparation
 
 ## Next
 
-- Fixora gerçek screenshot seçimi ve entegrasyonu
-- JobFit TR gerçek screenshot seçimi ve entegrasyonu
-- Proje görsellerinin final visual polish kontrolü
 - Favicon / branding kontrolü (ilk yayını bloke etmez)
 - Gerçek Open Graph paylaşım görselinin hazırlanması
 - Final browser QA: gerçek cihazlar, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
@@ -77,7 +77,7 @@
 - Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
 - Hero tipografi ağırlıklı; masaüstünde dekoratif HTML/CSS browser önizlemesiyle iki kolon, mobilde yalnızca metin ve CTA'lar kullanılıyor
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Ana sayfanın tüm içerik bölümleri, Chrome responsive/accessibility QA, temel SEO ve README tamamlandı; gerçek screenshot'lar, final browser QA ve yayın işlemleri sırada
+- Ana sayfanın tüm içerik bölümleri, Chrome responsive/accessibility QA, temel SEO ve README tamamlandı; gerçek screenshot entegrasyonu da tamamlandı; branding, final browser QA ve yayın işlemleri sırada
 - Milestone 9 talebine göre Faq.tsx altı soruyu aynı anda tek yanıt açılan React state kontrollü accordion olarak sunuyor; önceki açık soru-cevap taslağının yerini aldı
 - Contact.tsx petrol yeşili yüzeyde Gmail compose ve Instagram profil bağlantılarını yeni sekmede sunuyor; footer e-postası mailto olarak kaldı. Form, telefon ve WhatsApp eklenmedi
 - Footer.tsx marka, beş bölüm bağlantısı, gerçek iletişim kanalları ve JavaScript ile güncel yılı gösteriyor
@@ -92,7 +92,7 @@
 - Bölüm id'leri neden-yalin-rota ve surec; mevcut Süreç bağlantısı yeni bölüme bağlandı. Sahte güven verisi ve yeni CTA eklenmedi
 - Projects.tsx, kullanıcı tarafından sağlanan Fixora ve JobFit TR içeriklerini Project tipi ve map ile sunuyor; müşteri işi olmadıkları girişte açıklanıyor, her projede Kurucu projesi etiketi bulunuyor
 - Çalışmalar calismalar id'sine bağlı; projeler geniş bloklarda, 64rem ve üzerinde dönüşümlü görsel/bilgi düzeninde, mobilde bilgi önce olacak şekilde sunuluyor
-- Proje önizlemeleri kullanıcı talebiyle dekoratif HTML/CSS olarak hazırlandı; gerçek ekran görüntüsü olmadıkları görünür biçimde yazıyor. Sahte skor veya kullanıcı verisi kullanılmıyor
+- Projects görselleri src/assets/projects içindeki kullanıcı tarafından sağlanan PNG dosyalarından import ediliyor; açıklayıcı alt metin, gerçek width/height, lazy loading ve async decoding kullanılıyor. Görseller width: 100% / height: auto ile kırpılmadan gösteriliyor; placeholder ve visualVariant kaldırıldı. Masaüstünde çift sıradaki proje CSS nth-child(even) ile ters yerleşiyor
 - Canlıyı Gör ve GitHub bağlantıları kullanıcı tarafından verilen adresleri kullanıyor; yeni sekmede noopener noreferrer ile açılıyor
 - Milestone 5 kullanıcı talebine göre menü Hizmetler, Çalışmalar, Süreç ve SSS bağlantılarından oluşuyor; CTA İletişime Geç
 - Milestone 5 hero başlığı İşletmenize yakışan bir web sitesi olarak uygulandı; Web & Dijital Çözümler üst metni kullanıldı
@@ -106,4 +106,3 @@
 
 - Chrome'da uygulama kaynaklı JavaScript hatası veya uyarısı görülmedi. Henüz favicon olmadığı için tarayıcının otomatik /favicon.ico isteği 404 dönüyor; branding aşamasında ele alınacak, ilk yayını bloke etmiyor
 - Chrome kontrolleri gerçek cihaz, Safari/Firefox veya ekran okuyucu testi yerine geçmez; bunlar final browser QA kapsamında bekliyor
-- Fixora ve JobFit TR'nin gerçek ekran görüntüleri henüz paylaşılmadı; şimdilik açıkça etiketlenmiş dekoratif önizlemeler kullanılıyor
