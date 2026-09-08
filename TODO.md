@@ -11,7 +11,7 @@
 - [x] Hero bölümünü geliştir
 - [x] Hizmetler bölümünü geliştir
 - [x] Neden Yalın Rota ve süreç bölümlerini geliştir
-- [ ] Fixora ve JobFit TR içeriklerini hazırla ve Seçilmiş Çalışmalar bölümünü geliştir
+- [x] Fixora ve JobFit TR içeriklerini hazırla ve Seçilmiş Çalışmalar bölümünü geliştir
 - [ ] SSS, iletişim ve footer bölümlerini geliştir
 - [ ] Instagram ve yalinrota@gmail.com iletişim bağlantılarını doğrula
 - [ ] Mobil uyumluluk ve erişilebilirlik kontrollerini tamamla

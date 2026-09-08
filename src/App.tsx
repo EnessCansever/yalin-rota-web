@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import WhyUs from './components/WhyUs'
 import Process from './components/Process'
+import Projects from './components/Projects'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Services />
         <WhyUs />
         <Process />
+        <Projects />
       </main>
     </>
   )

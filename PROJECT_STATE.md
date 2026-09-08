@@ -21,15 +21,16 @@
 - Neden Yalın Rota bölümü geliştirildi
 - Çalışma süreci bölümü geliştirildi
 - Neden Yalın Rota ve süreç sonrasında TypeScript kontrolü ve production build başarılı oldu; mobil/masaüstü yerleşim kuralları kod üzerinden incelendi
+- Seçilmiş çalışmalar bölümü geliştirildi
+- Çalışmalar sonrasında TypeScript ve production build doğrulandı; Chrome'da 320, 375, 768, 1024 ve 1440 px yerleşim/taşma, mobil anchor, dış bağlantı öznitelikleri ve reduced-motion kontrolleri geçti
 
 ## Current Task
 
-- Seçilmiş çalışmalar bölümünün geliştirilmesi
+- SSS, iletişim ve footer bölümlerinin geliştirilmesi
 
 ## Next
 
 - DESIGN_SYSTEM.md kararlarının temel başlangıç stilleri üzerine aşamalı olarak uygulanması
-- Fixora ve JobFit TR içeriklerinin hazırlanması ve Seçilmiş Çalışmalar bölümünün geliştirilmesi
 - Sık sorulan sorular bölümünün geliştirilmesi
 - İletişim alanının geliştirilmesi
 - Footer geliştirilmesi
@@ -66,7 +67,7 @@
 - Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
 - Hero görsel gerektirmeyen, sola hizalı ve tipografi ağırlıklı olacak
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Teknik kurulum, header, hero, hizmetler, Neden Yalın Rota ve süreç tamamlandı; diğer ana sayfa bölümleri henüz geliştirilmedi
+- Teknik kurulum, header, hero, hizmetler, Neden Yalın Rota, süreç ve seçilmiş çalışmalar tamamlandı; SSS, iletişim ve footer henüz geliştirilmedi
 - React 19, TypeScript 7, Vite 8 ve Tailwind CSS 4 kuruldu; kesin bağımlılık sürümleri package-lock.json içinde tutuluyor
 - Tailwind CSS resmi @tailwindcss/vite eklentisiyle bağlandı; ayrı PostCSS veya Tailwind yapılandırma dosyası gerekmedi
 - Global CSS temel ayarlara ek olarak header, mobil menü, hero, hizmetler, ortak CTA ve görünür odak stillerini içeriyor
@@ -75,6 +76,10 @@
 - WhyUs.tsx dört çalışma ilkesini beyaz zeminde ayırıcılı listeyle sunuyor; 64rem ve üzerinde giriş ve liste iki kolona ayrılıyor
 - Process.tsx dört adımı sıralı listeyle sunuyor; mobilde tek kolon, 48rem ve üzerinde 2×2 düzen kullanılıyor
 - Bölüm id'leri neden-yalin-rota ve surec; mevcut Süreç bağlantısı yeni bölüme bağlandı. Sahte güven verisi ve yeni CTA eklenmedi
+- Projects.tsx, kullanıcı tarafından sağlanan Fixora ve JobFit TR içeriklerini Project tipi ve map ile sunuyor; projelerin müşteri işi olmadığı girişte ve her projede belirtiliyor
+- Çalışmalar calismalar id'sine bağlı; projeler geniş bloklarda, 64rem ve üzerinde dönüşümlü görsel/bilgi düzeninde, mobilde bilgi önce olacak şekilde sunuluyor
+- Proje önizlemeleri kullanıcı talebiyle dekoratif HTML/CSS olarak hazırlandı; gerçek ekran görüntüsü olmadıkları görünür biçimde yazıyor. Sahte skor veya kullanıcı verisi kullanılmıyor
+- Canlıyı Gör ve GitHub bağlantıları kullanıcı tarafından verilen adresleri kullanıyor; yeni sekmede noopener noreferrer ile açılıyor
 - Milestone 5 kullanıcı talebine göre menü Hizmetler, Çalışmalar, Süreç ve SSS bağlantılarından oluşuyor; CTA İletişime Geç
 - Milestone 5 hero başlığı İşletmenize yakışan bir web sitesi olarak uygulandı; Web & Dijital Çözümler üst metni kullanıldı
 - Header ve Hero ayrı bileşenlerde; menü tek bağlantı dizisi, useState ve odak yönetimi için useRef kullanıyor
@@ -84,6 +89,6 @@
 
 ## Known Issues
 
-- Çalışmalar, SSS ve iletişim hedef bölümleri henüz yok; ilgili bağlantılar gelecekteki section id'lerine hazırlandı
-- Responsive kurallar kod üzerinden incelendi; tarayıcı test aracı kurulu olmadığından gerçek viewport ve klavye etkileşim testleri henüz yapılmadı
-- Fixora ve JobFit TR için açıklamalar, kurucunun katkısı, görseller ve varsa bağlantılar henüz paylaşılmadı; içerik hazırlanırken kullanıcıdan alınacak
+- SSS ve iletişim hedef bölümleri henüz yok; ilgili bağlantılar gelecekteki section id'lerine hazırlandı
+- Çalışmalar için temel Chrome kontrolleri tamamlandı; tüm sayfanın kapsamlı klavye, ekran okuyucu ve görsel QA kontrolleri yayın öncesinde yapılacak
+- Fixora ve JobFit TR'nin gerçek ekran görüntüleri henüz paylaşılmadı; şimdilik açıkça etiketlenmiş dekoratif önizlemeler kullanılıyor
