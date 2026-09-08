@@ -21,7 +21,7 @@
 - [x] Milestone 10 TypeScript ve production build kontrolünü tamamla
 - [x] Projects final visual polish
 - [x] Replace Fixora and JobFit TR placeholder previews with selected real screenshots
-- [ ] Favicon / branding kontrolü: eksik favicon.ico isteğini ele al; logo ilk yayını bloke etmez
+- [x] Onaylanmış header/footer logosunu, favicon setini ve manifesti entegre et; favicon 404 ve responsive kontrollerini tamamla
 - [ ] Gerçek Open Graph paylaşım görselini hazırla
 - [ ] Final browser QA: gerçek cihaz, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
 - [ ] Siteyi yayınla

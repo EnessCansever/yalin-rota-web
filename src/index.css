@@ -57,13 +57,22 @@
   padding-block: 0.75rem;
 }
 
-.wordmark {
+.brand-link {
   display: inline-flex;
   align-items: center;
   min-height: 3rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 9rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.site-footer .brand-logo {
+  width: 8.625rem;
 }
 
 .menu-toggle {
@@ -325,6 +334,10 @@
 
   .header-inner {
     min-height: 5rem;
+  }
+
+  .site-header .brand-logo {
+    width: 10.125rem;
   }
 
   .menu-toggle {

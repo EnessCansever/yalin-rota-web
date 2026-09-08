@@ -1,3 +1,5 @@
+import logo from '../assets/brand/yalin-rota-logo.png'
+
 const footerLinks = [
   { label: 'Hizmetler', href: '#hizmetler' },
   { label: 'Çalışmalar', href: '#calismalar' },
@@ -14,7 +16,9 @@ export default function Footer() {
       <div className="page-container">
         <div className="footer-layout">
           <div>
-            <a className="wordmark" href="#sayfa-basi">Yalın Rota</a>
+            <a className="brand-link" href="#top">
+              <img className="brand-logo" src={logo} alt="Yalın Rota" width={2172} height={724} />
+            </a>
             <p className="footer-tagline">Web &amp; Dijital Çözümler</p>
           </div>
           <nav aria-label="Alt navigasyon">

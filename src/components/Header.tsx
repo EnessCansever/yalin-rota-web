@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import logo from '../assets/brand/yalin-rota-logo.png'
 
 const navigationLinks = [
   { label: 'Hizmetler', href: '#hizmetler' },
@@ -39,7 +40,8 @@ export default function Header() {
 
   return (
     <header
-      id="sayfa-basi"
+      id="top"
+      tabIndex={-1}
       className="site-header"
       onKeyDown={(event) => {
         if (event.key === 'Escape' && isMenuOpen) {
@@ -49,8 +51,8 @@ export default function Header() {
       }}
     >
       <div className="page-container header-inner">
-        <a className="wordmark" href="#sayfa-basi" onClick={() => closeMenu('#sayfa-basi')}>
-          Yalın Rota
+        <a className="brand-link" href="#top" onClick={() => closeMenu('#top')}>
+          <img className="brand-logo" src={logo} alt="Yalın Rota" width={2172} height={724} />
         </a>
         <button
           ref={menuButtonRef}

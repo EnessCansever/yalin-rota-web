@@ -38,13 +38,18 @@
 - Fixora ve JobFit TR gerçek proje screenshot’ları Vite asset import ile entegre edildi; temsili JSX/CSS ve visualVariant kaldırıldı
 - Projects görsel polish tamamlandı; TypeScript ve production build geçti. Chrome’da 320, 375, 430, 768, 1024 ve 1440 px görsel yüklenmesi, doğal oran, taşma, alt metin, dönüşümlü düzen, dış bağlantı öznitelikleri ve reduced-motion doğrulandı; yeni console hatası/uyarısı bulunmadı
 
+- Milestone 12 branding/favicon entegrasyonu tamamlandı: onaylanmış logo header ve footer’da Vite import ile kullanılıyor; kaynak PNG dosyalarının değişmediği SHA-256 ile doğrulandı
+- Mark alpha maskesinden beyaz sembollü petrol yeşili favicon seti üretildi: 16/32 PNG, 16/32/48 ICO, 180 Apple, 192/512 Android ikonları ve minimal webmanifest
+- Yedi genişlikte (320, 375, 430, 768, 1024, 1280, 1440 px) logo oranı, taşma, menü ve top anchor doğrulandı; dev/production yüklemesinde layout shift kaydedilmedi
+- Favicon 404 giderildi; Chrome favicon isteği ve tüm ikon/manifest adresleri dev ve production’da doğru MIME ile 200 döndü. Manifest hatası ve console error/warning yok; FAQ ve iki screenshot lightbox kontrolü geçti
+- Milestone 12 TypeScript ve production build doğrulandı
+
 ## Current Task
 
-- Final branding, browser QA and deployment preparation
+- Final release QA / deployment preparation
 
 ## Next
 
-- Favicon / branding kontrolü (ilk yayını bloke etmez)
 - Gerçek Open Graph paylaşım görselinin hazırlanması
 - Final browser QA: gerçek cihazlar, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
 - Deployment
@@ -74,10 +79,10 @@
 - WhatsApp numarası henüz belirlenmedi; ilk sürümde zorunlu olmayacak ve uydurulmayacak
 - İlk sürümde iletişim formu kullanılmayacak
 - Görsel kararlar DESIGN_SYSTEM.md içinde tutulacak; açık nötr zemin ve tek accent olarak koyu petrol yeşili kullanılacak
-- Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
+- Sistem sans-serif fontu korunuyor; header/footer artık onaylanmış yatay PNG logoyu kullanıyor. Mobil header 144 px, desktop 162 px, footer 138 px; doğal 3:1 oran ve intrinsic boyutlar korunuyor
 - Hero tipografi ağırlıklı; masaüstünde dekoratif HTML/CSS browser önizlemesiyle iki kolon, mobilde yalnızca metin ve CTA'lar kullanılıyor
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Ana sayfanın tüm içerik bölümleri, Chrome responsive/accessibility QA, temel SEO ve README tamamlandı; gerçek screenshot entegrasyonu da tamamlandı; branding, final browser QA ve yayın işlemleri sırada
+- Ana sayfanın tüm içerik bölümleri, Chrome responsive/accessibility QA, temel SEO ve README tamamlandı; gerçek screenshot entegrasyonu da tamamlandı; branding de tamamlandı; final browser QA ve yayın işlemleri sırada
 - Milestone 9 talebine göre Faq.tsx altı soruyu aynı anda tek yanıt açılan React state kontrollü accordion olarak sunuyor; önceki açık soru-cevap taslağının yerini aldı
 - Contact.tsx petrol yeşili yüzeyde Gmail compose ve Instagram profil bağlantılarını yeni sekmede sunuyor; footer e-postası mailto olarak kaldı. Form, telefon ve WhatsApp eklenmedi
 - Footer.tsx marka, beş bölüm bağlantısı, gerçek iletişim kanalları ve JavaScript ile güncel yılı gösteriyor
@@ -100,9 +105,10 @@
 - Mobil menü 64rem altında açılan liste; hero CTA'ları 30rem altında alt alta, içerik en fazla 70rem genişliğinde
 - npm run build önce TypeScript kontrolünü, ardından production build işlemini çalıştırıyor; npm run dev ve npm run preview komutları mevcut
 - README geliştirici odaklı kısa kurulum/build bilgilerini içeriyor; Vite demo içerikleri bulunmuyor
-- Aktif domain ve paylaşım görseli hazır olmadan canonical, og:url ve og:image eklenmeyecek; favicon bu milestone'da üretilmedi
+- Aktif domain ve paylaşım görseli hazır olmadan canonical, og:url ve og:image eklenmeyecek; favicon seti ve manifest Milestone 12’de eklendi
+- Header ve footer marka bağlantıları #top hedefine gider; mevcut navigasyon, içerikler ve lightbox korunur
+- Favicon türevleri mevcut Pillow ile üretildi; Y şekli kaynak alpha kanalından gelir. Beyaz sembol, #176B55 yuvarlatılmış kare içinde yaklaşık %70 genişlik kaplar. Kaynak logo/mark PNG’leri değiştirilmedi
 
 ## Known Issues
 
-- Chrome'da uygulama kaynaklı JavaScript hatası veya uyarısı görülmedi. Henüz favicon olmadığı için tarayıcının otomatik /favicon.ico isteği 404 dönüyor; branding aşamasında ele alınacak, ilk yayını bloke etmiyor
 - Chrome kontrolleri gerçek cihaz, Safari/Firefox veya ekran okuyucu testi yerine geçmez; bunlar final browser QA kapsamında bekliyor
