@@ -27,22 +27,30 @@
 - İletişim bölümü geliştirildi
 - Footer geliştirildi
 - Milestone 9 TypeScript ve production build kontrolleri geçti; Chrome'da FAQ Enter/Space/Tab, tek açık yanıt, ARIA/id, görünür odak, mailto/Instagram bağlantıları, header/hero anchor'ları, reduced-motion ve 320–1440 px taşma kontrolleri doğrulandı
+- Ana sayfa içerik geliştirmesi tamamlandı
+- Responsive ve accessibility QA tamamlandı: Chrome production preview'da 320, 375, 430, 768, 1024, 1280 ve 1440 px genişliklerde yatay taşma/kırpılan metin bulunmadı; açık mobil menü ve altı FAQ yanıtı da kontrol edildi
+- Tek H1, heading sırası, landmark'lar, ARIA/id ilişkileri, Tab/Enter/Space/Escape, skip link, görünür odak ve prefers-reduced-motion doğrulandı; ölçülen görünür metin kontrastları AA eşiklerini karşıladı
+- Tüm iç anchor hedefleri ve header/hero etkileşimleri doğrulandı; Fixora/JobFit TR canlı ve GitHub adresleri, Instagram ve Gmail hedefleri HTTP 200 döndü. Gmail oturum açılmadığında giriş ekranına yönlendiriyor; oturum içindeki compose ekranı test edilmedi
+- Temel SEO yapılandırıldı: Türkçe title/description, theme-color ve URL gerektirmeyen Open Graph alanları eklendi; lang ve viewport doğrulandı
+- README hazırlandı
+- Milestone 10 TypeScript kontrolü ve production build doğrulandı; JS 210.08 kB (gzip 65.26 kB), CSS 19.75 kB (gzip 4.46 kB). Gereksiz paket, import veya Vite demo asset'i bulunmadı; mevcut UI korundu
 
 ## Current Task
 
-- Final responsive, accessibility, SEO ve production hazırlığı
+- Final visual polish and real project screenshot integration
 
 ## Next
 
-- Final visual polish
-- Fixora / JobFit TR gerçek screenshot entegrasyonu
-- Responsive QA
-- Accessibility QA
-- SEO temelleri
-- README hazırlanması
-- Production build ve yayın öncesi kontrol
+- Fixora gerçek screenshot seçimi ve entegrasyonu
+- JobFit TR gerçek screenshot seçimi ve entegrasyonu
+- Proje görsellerinin final visual polish kontrolü
+- Favicon / branding kontrolü (ilk yayını bloke etmez)
+- Gerçek Open Graph paylaşım görselinin hazırlanması
+- Final browser QA: gerçek cihazlar, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
 - Deployment
 - yalinrota.com.tr domaininin satın alınması ve bağlanması
+- Aktif production domainiyle canonical, og:url ve gerçek paylaşım görseliyle og:image yapılandırılması
+- Search Console ve indexing kontrolü
 
 ## Decisions
 
@@ -67,11 +75,11 @@
 - İlk sürümde iletişim formu kullanılmayacak
 - Görsel kararlar DESIGN_SYSTEM.md içinde tutulacak; açık nötr zemin ve tek accent olarak koyu petrol yeşili kullanılacak
 - Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
-- Hero görsel gerektirmeyen, sola hizalı ve tipografi ağırlıklı olacak
+- Hero tipografi ağırlıklı; masaüstünde dekoratif HTML/CSS browser önizlemesiyle iki kolon, mobilde yalnızca metin ve CTA'lar kullanılıyor
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Ana sayfanın tüm içerik bölümleri tamamlandı; final polish, kapsamlı QA, SEO ve yayın hazırlığı henüz yapılmadı
+- Ana sayfanın tüm içerik bölümleri, Chrome responsive/accessibility QA, temel SEO ve README tamamlandı; gerçek screenshot'lar, final browser QA ve yayın işlemleri sırada
 - Milestone 9 talebine göre Faq.tsx altı soruyu aynı anda tek yanıt açılan React state kontrollü accordion olarak sunuyor; önceki açık soru-cevap taslağının yerini aldı
-- Contact.tsx petrol yeşili yüzeyde gerçek mailto ve Instagram profil bağlantılarını sunuyor; form, telefon ve WhatsApp eklenmedi
+- Contact.tsx petrol yeşili yüzeyde Gmail compose ve Instagram profil bağlantılarını yeni sekmede sunuyor; footer e-postası mailto olarak kaldı. Form, telefon ve WhatsApp eklenmedi
 - Footer.tsx marka, beş bölüm bağlantısı, gerçek iletişim kanalları ve JavaScript ile güncel yılı gösteriyor
 - sss ve iletisim id'leri mevcut navigasyon ve hero CTA'larına bağlandı; eski bileşenlerde değişiklik gerekmedi
 - React 19, TypeScript 7, Vite 8 ve Tailwind CSS 4 kuruldu; kesin bağımlılık sürümleri package-lock.json içinde tutuluyor
@@ -79,10 +87,10 @@
 - Global CSS temel ayarlara ek olarak header, mobil menü, hero, hizmetler, ortak CTA ve görünür odak stillerini içeriyor
 - Hizmetler Services.tsx içinde bir veri dizisinden map ile üretiliyor; mobilde tek kolon, 48rem ve üzerinde 2×2 grid kullanılıyor
 - Hizmetler bölümü hizmetler id'siyle mevcut header ve hero bağlantılarına bağlandı; bölüm H2, hizmet adları H3 olarak düzenlendi
-- WhyUs.tsx dört çalışma ilkesini beyaz zeminde ayırıcılı listeyle sunuyor; 64rem ve üzerinde giriş ve liste iki kolona ayrılıyor
-- Process.tsx dört adımı sıralı listeyle sunuyor; mobilde tek kolon, 48rem ve üzerinde 2×2 düzen kullanılıyor
+- WhyUs.tsx dört çalışma ilkesini hafif nötr yüzey, kısa sol accent işaretleri ve beyaz hover yüzeyiyle sunuyor; 64rem ve üzerinde giriş ve liste iki kolona ayrılıyor
+- Process.tsx dört adımı dikey timeline olarak sunuyor; 48rem ve üzerinde her adımın başlığı ve açıklaması yan yana yerleşiyor. Son node'dan sonra çizgi devam etmiyor
 - Bölüm id'leri neden-yalin-rota ve surec; mevcut Süreç bağlantısı yeni bölüme bağlandı. Sahte güven verisi ve yeni CTA eklenmedi
-- Projects.tsx, kullanıcı tarafından sağlanan Fixora ve JobFit TR içeriklerini Project tipi ve map ile sunuyor; projelerin müşteri işi olmadığı girişte ve her projede belirtiliyor
+- Projects.tsx, kullanıcı tarafından sağlanan Fixora ve JobFit TR içeriklerini Project tipi ve map ile sunuyor; müşteri işi olmadıkları girişte açıklanıyor, her projede Kurucu projesi etiketi bulunuyor
 - Çalışmalar calismalar id'sine bağlı; projeler geniş bloklarda, 64rem ve üzerinde dönüşümlü görsel/bilgi düzeninde, mobilde bilgi önce olacak şekilde sunuluyor
 - Proje önizlemeleri kullanıcı talebiyle dekoratif HTML/CSS olarak hazırlandı; gerçek ekran görüntüsü olmadıkları görünür biçimde yazıyor. Sahte skor veya kullanıcı verisi kullanılmıyor
 - Canlıyı Gör ve GitHub bağlantıları kullanıcı tarafından verilen adresleri kullanıyor; yeni sekmede noopener noreferrer ile açılıyor
@@ -91,9 +99,11 @@
 - Header ve Hero ayrı bileşenlerde; menü tek bağlantı dizisi, useState ve odak yönetimi için useRef kullanıyor
 - Mobil menü 64rem altında açılan liste; hero CTA'ları 30rem altında alt alta, içerik en fazla 70rem genişliğinde
 - npm run build önce TypeScript kontrolünü, ardından production build işlemini çalıştırıyor; npm run dev ve npm run preview komutları mevcut
-- README ve Vite demo içerikleri oluşturulmadı; mevcut planlama belgeleri korundu
+- README geliştirici odaklı kısa kurulum/build bilgilerini içeriyor; Vite demo içerikleri bulunmuyor
+- Aktif domain ve paylaşım görseli hazır olmadan canonical, og:url ve og:image eklenmeyecek; favicon bu milestone'da üretilmedi
 
 ## Known Issues
 
-- Temel Chrome etkileşim/yerleşim kontrolleri tamamlandı; kapsamlı ekran okuyucu, tarayıcılar arası ve final görsel QA yayın öncesinde yapılacak
+- Chrome'da uygulama kaynaklı JavaScript hatası veya uyarısı görülmedi. Henüz favicon olmadığı için tarayıcının otomatik /favicon.ico isteği 404 dönüyor; branding aşamasında ele alınacak, ilk yayını bloke etmiyor
+- Chrome kontrolleri gerçek cihaz, Safari/Firefox veya ekran okuyucu testi yerine geçmez; bunlar final browser QA kapsamında bekliyor
 - Fixora ve JobFit TR'nin gerçek ekran görüntüleri henüz paylaşılmadı; şimdilik açıkça etiketlenmiş dekoratif önizlemeler kullanılıyor

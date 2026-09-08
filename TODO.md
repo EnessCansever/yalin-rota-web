@@ -14,11 +14,17 @@
 - [x] Fixora ve JobFit TR içeriklerini hazırla ve Seçilmiş Çalışmalar bölümünü geliştir
 - [x] SSS, iletişim ve footer bölümlerini geliştir
 - [x] Instagram ve yalinrota@gmail.com iletişim bağlantılarını doğrula
+- [x] Mobil uyumluluk ve erişilebilirlik kontrollerini Chrome'da tamamla (320, 375, 430, 768, 1024, 1280, 1440 px)
+- [x] İç anchor'ları ve dış bağlantı hedeflerini kontrol et
+- [x] SEO temellerini tamamla
+- [x] README hazırla
+- [x] Milestone 10 TypeScript ve production build kontrolünü tamamla
 - [ ] Final visual polish
 - [ ] Replace Fixora and JobFit TR placeholder previews with selected real screenshots
-- [ ] Mobil uyumluluk ve erişilebilirlik kontrollerini tamamla
-- [ ] SEO temellerini tamamla
-- [ ] README hazırla
-- [ ] Production build ve yayın öncesi kontrollerini tamamla
+- [ ] Favicon / branding kontrolü: eksik favicon.ico isteğini ele al; logo ilk yayını bloke etmez
+- [ ] Gerçek Open Graph paylaşım görselini hazırla
+- [ ] Final browser QA: gerçek cihaz, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
 - [ ] Siteyi yayınla
 - [ ] Site hazır olduğunda yalinrota.com.tr domainini satın al ve bağla
+- [ ] Aktif production domaini ve paylaşım görseliyle canonical, og:url ve og:image ekle
+- [ ] Search Console ve indexing kontrolünü yap
