@@ -998,7 +998,275 @@
   }
 }
 
+.faq,
+.contact {
+  padding-block: 4rem;
+  scroll-margin-top: 1rem;
+  overflow-wrap: break-word;
+}
+
+.faq {
+  background: #fff;
+  border-top: 1px solid #d8dfda;
+}
+
+.faq-inner {
+  max-width: 47.5rem;
+  margin-inline: auto;
+}
+
+.faq-eyebrow,
+.contact-eyebrow {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.faq-eyebrow {
+  color: #176b55;
+}
+
+.faq h2,
+.contact h2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.faq-description,
+.contact-description {
+  margin-top: 1rem;
+}
+
+.faq-description,
+.faq-answer {
+  color: #52605a;
+}
+
+.faq-list {
+  margin-top: 2rem;
+  border-bottom: 1px solid #d8dfda;
+}
+
+.faq-item {
+  border-top: 1px solid #d8dfda;
+}
+
+.faq-item button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 180ms;
+}
+
+.faq-item button[aria-expanded="true"] {
+  background: #f0f3ef;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  color: #176b55;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.faq-answer {
+  padding: 1rem 0.75rem 1.5rem;
+}
+
+.contact {
+  background: #176b55;
+  color: #fff;
+}
+
+.contact:focus-visible,
+.contact a:focus-visible {
+  outline-color: #fff;
+}
+
+.contact-layout,
+.contact-channels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.contact-intro {
+  max-width: 40rem;
+}
+
+.contact-channels {
+  gap: 1rem;
+}
+
+.contact-channel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  overflow-wrap: anywhere;
+  transition: background-color 180ms;
+}
+
+.contact-channel-name {
+  font-size: 0.875rem;
+}
+
+.contact-channel-address {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.contact-channel-action {
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.site-footer {
+  padding-block: 2rem;
+}
+
+.footer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.footer-tagline,
+.footer-copyright {
+  color: #52605a;
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: #176b55;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.footer-contact a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #d8dfda;
+}
+
+@media (min-width: 48rem) {
+  .faq,
+  .contact {
+    padding-block: 5rem;
+  }
+
+  .faq h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .faq-list {
+    margin-top: 3rem;
+  }
+
+  .contact-channels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    padding-block: 3rem;
+  }
+
+  .footer-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .faq,
+  .contact {
+    padding-block: 6rem;
+  }
+
+  .faq h2,
+  .contact h2 {
+    font-size: 2.25rem;
+  }
+
+  .faq-description,
+  .faq-item button,
+  .faq-answer,
+  .contact-description {
+    font-size: 1.125rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .contact-channels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq-item button:hover {
+    background: #f0f3ef;
+  }
+
+  .contact-channel:hover {
+    background: #10513f;
+  }
+
+  .footer-links a:hover,
+  .footer-contact a:hover {
+    color: #10513f;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .faq-item button,
+  .contact-channel {
+    transition: none;
+  }
+
   .project-showcase,
   .project-visual,
   .project-links a {

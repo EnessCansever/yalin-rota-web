@@ -23,22 +23,24 @@
 - Neden Yalın Rota ve süreç sonrasında TypeScript kontrolü ve production build başarılı oldu; mobil/masaüstü yerleşim kuralları kod üzerinden incelendi
 - Seçilmiş çalışmalar bölümü geliştirildi
 - Çalışmalar sonrasında TypeScript ve production build doğrulandı; Chrome'da 320, 375, 768, 1024 ve 1440 px yerleşim/taşma, mobil anchor, dış bağlantı öznitelikleri ve reduced-motion kontrolleri geçti
+- SSS bölümü geliştirildi
+- İletişim bölümü geliştirildi
+- Footer geliştirildi
+- Milestone 9 TypeScript ve production build kontrolleri geçti; Chrome'da FAQ Enter/Space/Tab, tek açık yanıt, ARIA/id, görünür odak, mailto/Instagram bağlantıları, header/hero anchor'ları, reduced-motion ve 320–1440 px taşma kontrolleri doğrulandı
 
 ## Current Task
 
-- SSS, iletişim ve footer bölümlerinin geliştirilmesi
+- Final responsive, accessibility, SEO ve production hazırlığı
 
 ## Next
 
-- DESIGN_SYSTEM.md kararlarının temel başlangıç stilleri üzerine aşamalı olarak uygulanması
-- Sık sorulan sorular bölümünün geliştirilmesi
-- İletişim alanının geliştirilmesi
-- Footer geliştirilmesi
-- Instagram ve yalinrota@gmail.com iletişim bağlantılarının doğrulanması
-- Responsive kontrol
-- Accessibility kontrol
+- Final visual polish
+- Fixora / JobFit TR gerçek screenshot entegrasyonu
+- Responsive QA
+- Accessibility QA
 - SEO temelleri
-- Production build kontrolü
+- README hazırlanması
+- Production build ve yayın öncesi kontrol
 - Deployment
 - yalinrota.com.tr domaininin satın alınması ve bağlanması
 
@@ -67,7 +69,11 @@
 - Sistem sans-serif fontu ve tipografik Yalın Rota wordmark kullanılacak; özel font veya logo ilk yayın için gerekmeyecek
 - Hero görsel gerektirmeyen, sola hizalı ve tipografi ağırlıklı olacak
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Teknik kurulum, header, hero, hizmetler, Neden Yalın Rota, süreç ve seçilmiş çalışmalar tamamlandı; SSS, iletişim ve footer henüz geliştirilmedi
+- Ana sayfanın tüm içerik bölümleri tamamlandı; final polish, kapsamlı QA, SEO ve yayın hazırlığı henüz yapılmadı
+- Milestone 9 talebine göre Faq.tsx altı soruyu aynı anda tek yanıt açılan React state kontrollü accordion olarak sunuyor; önceki açık soru-cevap taslağının yerini aldı
+- Contact.tsx petrol yeşili yüzeyde gerçek mailto ve Instagram profil bağlantılarını sunuyor; form, telefon ve WhatsApp eklenmedi
+- Footer.tsx marka, beş bölüm bağlantısı, gerçek iletişim kanalları ve JavaScript ile güncel yılı gösteriyor
+- sss ve iletisim id'leri mevcut navigasyon ve hero CTA'larına bağlandı; eski bileşenlerde değişiklik gerekmedi
 - React 19, TypeScript 7, Vite 8 ve Tailwind CSS 4 kuruldu; kesin bağımlılık sürümleri package-lock.json içinde tutuluyor
 - Tailwind CSS resmi @tailwindcss/vite eklentisiyle bağlandı; ayrı PostCSS veya Tailwind yapılandırma dosyası gerekmedi
 - Global CSS temel ayarlara ek olarak header, mobil menü, hero, hizmetler, ortak CTA ve görünür odak stillerini içeriyor
@@ -89,6 +95,5 @@
 
 ## Known Issues
 
-- SSS ve iletişim hedef bölümleri henüz yok; ilgili bağlantılar gelecekteki section id'lerine hazırlandı
-- Çalışmalar için temel Chrome kontrolleri tamamlandı; tüm sayfanın kapsamlı klavye, ekran okuyucu ve görsel QA kontrolleri yayın öncesinde yapılacak
+- Temel Chrome etkileşim/yerleşim kontrolleri tamamlandı; kapsamlı ekran okuyucu, tarayıcılar arası ve final görsel QA yayın öncesinde yapılacak
 - Fixora ve JobFit TR'nin gerçek ekran görüntüleri henüz paylaşılmadı; şimdilik açıkça etiketlenmiş dekoratif önizlemeler kullanılıyor

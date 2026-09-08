@@ -4,6 +4,9 @@ import Services from './components/Services'
 import WhyUs from './components/WhyUs'
 import Process from './components/Process'
 import Projects from './components/Projects'
+import Faq from './components/Faq'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -16,7 +19,10 @@ export default function App() {
         <WhyUs />
         <Process />
         <Projects />
+        <Faq />
+        <Contact />
       </main>
+      <Footer />
     </>
   )
 }

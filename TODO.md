@@ -6,16 +6,19 @@
 - [x] Tasarım yönünü ve temel design system kararlarını belirle
 - [x] React, TypeScript, Vite ve Tailwind CSS kurulumunu yap
 - [x] İlk TypeScript, production build ve geliştirme sunucusu kontrollerini tamamla
-- [ ] DESIGN_SYSTEM.md kararlarını temel stillere uygula
+- [x] DESIGN_SYSTEM.md kararlarını mevcut milestone revizyonlarıyla temel stillere uygula
 - [x] Header ve responsive navigasyonu geliştir
 - [x] Hero bölümünü geliştir
 - [x] Hizmetler bölümünü geliştir
 - [x] Neden Yalın Rota ve süreç bölümlerini geliştir
 - [x] Fixora ve JobFit TR içeriklerini hazırla ve Seçilmiş Çalışmalar bölümünü geliştir
-- [ ] SSS, iletişim ve footer bölümlerini geliştir
-- [ ] Instagram ve yalinrota@gmail.com iletişim bağlantılarını doğrula
+- [x] SSS, iletişim ve footer bölümlerini geliştir
+- [x] Instagram ve yalinrota@gmail.com iletişim bağlantılarını doğrula
+- [ ] Final visual polish
+- [ ] Replace Fixora and JobFit TR placeholder previews with selected real screenshots
 - [ ] Mobil uyumluluk ve erişilebilirlik kontrollerini tamamla
 - [ ] SEO temellerini tamamla
+- [ ] README hazırla
 - [ ] Production build ve yayın öncesi kontrollerini tamamla
 - [ ] Siteyi yayınla
 - [ ] Site hazır olduğunda yalinrota.com.tr domainini satın al ve bağla
