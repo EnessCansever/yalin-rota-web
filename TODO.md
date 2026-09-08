@@ -22,9 +22,13 @@
 - [x] Projects final visual polish
 - [x] Replace Fixora and JobFit TR placeholder previews with selected real screenshots
 - [x] Onaylanmış header/footer logosunu, favicon setini ve manifesti entegre et; favicon 404 ve responsive kontrollerini tamamla
+- [x] Milestone 13 Chrome release QA: dokuz genişlikte responsive, menü, lightbox, FAQ, klavye, ARIA, kontrast ve reduced-motion kontrollerini tamamla
+- [x] Dev/production console ve network, CTA/link, SEO/favicon/manifest, kaynak güvenliği, TypeScript ve production build kontrollerini tamamla
+- [x] Standart static deployment hazırlığını doğrula (npm run build → dist/, site kökünde yayın)
+- [ ] Gerçek cihaz, Safari/Firefox ve ekran okuyucuyla ek yayın kontrolü yap
+- [ ] Milestone 14: hosting sağlayıcısını belirle ve siteyi production'a yayınla
+- [ ] Site hazır olduğunda yalinrota.com.tr domainini satın al ve bağla (henüz satın alınmadı / bağlanmadı)
+- [ ] Canlı yayında HTTPS, asset, anchor ve iletişim bağlantılarını doğrula
 - [ ] Gerçek Open Graph paylaşım görselini hazırla
-- [ ] Final browser QA: gerçek cihaz, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
-- [ ] Siteyi yayınla
-- [ ] Site hazır olduğunda yalinrota.com.tr domainini satın al ve bağla
 - [ ] Aktif production domaini ve paylaşım görseliyle canonical, og:url ve og:image ekle
 - [ ] Search Console ve indexing kontrolünü yap

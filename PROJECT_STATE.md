@@ -43,17 +43,26 @@
 - Yedi genişlikte (320, 375, 430, 768, 1024, 1280, 1440 px) logo oranı, taşma, menü ve top anchor doğrulandı; dev/production yüklemesinde layout shift kaydedilmedi
 - Favicon 404 giderildi; Chrome favicon isteği ve tüm ikon/manifest adresleri dev ve production’da doğru MIME ile 200 döndü. Manifest hatası ve console error/warning yok; FAQ ve iki screenshot lightbox kontrolü geçti
 - Milestone 12 TypeScript ve production build doğrulandı
+- Milestone 13 final release QA Chrome'da tamamlandı: 320, 360, 375, 390, 430, 768, 1024, 1280 ve 1440 px genişliklerde yatay taşma, kırpılan metin veya bozuk görsel bulunmadı
+- Mobil menü açma/kapatma, Escape, bağlantı sonrası odak ve genişlik değişimi; iki screenshot lightbox için Enter/Space, kapatma butonu, Escape, backdrop, görsel tıklaması, Tab/Shift+Tab, odak dönüşü ve scroll lock doğrulandı
+- FAQ klavye davranışı, tek H1 ve heading sırası, landmark'lar, benzersiz id/ARIA ilişkileri, görünür odak ve reduced-motion kontrol edildi; ölçülen görünür metinlerde en düşük kontrast 5.74:1 oldu
+- İç anchor ve CTA akışları, dış bağlantı güvenlik öznitelikleri ve hedefleri doğrulandı. Gmail alıcısı korunuyor; oturum içindeki compose ekranı test edilmedi
+- Dev ve production preview'da console error/warning, beklenmeyen ağ hatası veya layout shift kaydedilmedi; yedi favicon/manifest dosyası doğru MIME ile 200 döndü, manifest ve SEO alanları doğrulandı
+- Milestone 13 TypeScript ve production build geçti: JS 209.96 kB (gzip 65.52 kB), CSS 19.71 kB (gzip 4.53 kB); dist içindeki HTML asset hedefleri mevcut
+- Secret/API key, kişisel telefon, demo kalıntısı, kullanılmayan import/CSS veya gereksiz dependency tespit edilmedi; doğrulanmış bir uygulama sorunu bulunmadığından mevcut UI ve kaynak kod korundu
+- Standart static deployment hazırlığı doğrulandı; hosting sağlayıcısı seçilmedi ve yayın yapılmadı
 
 ## Current Task
 
-- Final release QA / deployment preparation
+- Milestone 14 — Production deployment and domain connection
 
 ## Next
 
+- Gerçek cihazlar, Safari/Firefox ve ekran okuyucuyla ek yayın kontrolü
+- Hosting sağlayıcısının belirlenmesi ve production deployment
+- yalinrota.com.tr domaininin satın alınması ve bağlanması (henüz satın alınmadı / bağlanmadı)
+- Canlı yayında HTTPS, asset, anchor ve iletişim bağlantılarının kontrolü
 - Gerçek Open Graph paylaşım görselinin hazırlanması
-- Final browser QA: gerçek cihazlar, Safari/Firefox ve ekran okuyucu kontrolü; son değişiklikler ardından production build
-- Deployment
-- yalinrota.com.tr domaininin satın alınması ve bağlanması
 - Aktif production domainiyle canonical, og:url ve gerçek paylaşım görseliyle og:image yapılandırılması
 - Search Console ve indexing kontrolü
 
@@ -82,7 +91,8 @@
 - Sistem sans-serif fontu korunuyor; header/footer artık onaylanmış yatay PNG logoyu kullanıyor. Mobil header 144 px, desktop 162 px, footer 138 px; doğal 3:1 oran ve intrinsic boyutlar korunuyor
 - Hero tipografi ağırlıklı; masaüstünde dekoratif HTML/CSS browser önizlemesiyle iki kolon, mobilde yalnızca metin ve CTA'lar kullanılıyor
 - Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Ana sayfanın tüm içerik bölümleri, Chrome responsive/accessibility QA, temel SEO ve README tamamlandı; gerçek screenshot entegrasyonu da tamamlandı; branding de tamamlandı; final browser QA ve yayın işlemleri sırada
+- Ana sayfa, gerçek screenshot entegrasyonu, branding, temel SEO, README ve Milestone 13 Chrome release QA tamamlandı; ek tarayıcı/cihaz kontrolleri ve yayın işlemleri sırada
+- Standart static yayın için build komutu npm run build, çıktı dizini dist/ olacak. Mevcut asset yolları site kökünde yayın varsayıyor; anchor tabanlı tek sayfa için uygulama sunucusu, ortam değişkeni veya route rewrite gerekmiyor. Hosting sağlayıcısı henüz seçilmedi
 - Milestone 9 talebine göre Faq.tsx altı soruyu aynı anda tek yanıt açılan React state kontrollü accordion olarak sunuyor; önceki açık soru-cevap taslağının yerini aldı
 - Contact.tsx petrol yeşili yüzeyde Gmail compose ve Instagram profil bağlantılarını yeni sekmede sunuyor; footer e-postası mailto olarak kaldı. Form, telefon ve WhatsApp eklenmedi
 - Footer.tsx marka, beş bölüm bağlantısı, gerçek iletişim kanalları ve JavaScript ile güncel yılı gösteriyor
@@ -111,4 +121,6 @@
 
 ## Known Issues
 
-- Chrome kontrolleri gerçek cihaz, Safari/Firefox veya ekran okuyucu testi yerine geçmez; bunlar final browser QA kapsamında bekliyor
+- Test edilen kapsamda yayını engelleyen bir uygulama hatası bulunmadı
+- Chrome kontrolleri gerçek cihaz, Safari/Firefox veya ekran okuyucu testi yerine geçmez; bu ek kontroller henüz tamamlanmadı
+- Production deployment ve domain satın alma/bağlantısı henüz yapılmadı; canonical, og:url ve gerçek paylaşım görseline bağlı og:image bekliyor
