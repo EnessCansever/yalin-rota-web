@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "https://yalinrota.com.tr/",
+      "permanent": true
+    }
+  ]
+}
