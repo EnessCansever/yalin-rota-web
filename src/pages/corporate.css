@@ -111,6 +111,17 @@
   font-weight: 600;
   transition: background-color 180ms;
 }
+.corporate-inline-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: 1.5rem;
+  color: #176b55;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  transition: color 180ms;
+}
 @media (min-width: 48rem) {
   .corporate-hero {
     padding-block: 4rem 5rem;
@@ -128,6 +139,9 @@
   .corporate-section {
     padding-block: 6rem;
   }
+  .corporate-section-compact {
+    padding-block: 5rem;
+  }
   .corporate-split {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 4rem;
@@ -137,6 +151,9 @@
   }
 }
 @media (hover: hover) and (pointer: fine) {
+  .corporate-inline-link:hover {
+    color: #10513f;
+  }
   .corporate-question summary:hover {
     background: #f0f3ef;
   }
@@ -145,7 +162,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .corporate-question summary, .corporate-contact-link {
+  .corporate-question summary, .corporate-contact-link, .corporate-inline-link {
     transition: none;
   }
 }

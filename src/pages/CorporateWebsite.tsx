@@ -5,7 +5,7 @@ const scopeItems = [
   { title: 'Telefonda ve bilgisayarda rahat kullanım', text: 'Ekran boyutuna uyum sağlayan tasarım, okunaklı metinler ve kolay kullanılan menüler hazırlıyoruz.' },
   { title: 'İşletmenizi anlatan içerik yapısı', text: 'Şirket tanıtımını ve hizmetlerinizi ziyaretçinin aradığı bilgiye kolayca ulaşabileceği bölümlerde düzenliyoruz.' },
   { title: 'Ulaşılabilir iletişim alanları', text: 'Paylaşmak istediğiniz gerçek iletişim kanallarını görünür kılıyoruz. Form gibi ek ihtiyaçları kapsam belirlerken ayrıca değerlendiriyoruz.' },
-  { title: 'Temel SEO altyapısı', text: 'Sayfa başlıklarını, açıklamalarını ve arama motorlarının içeriği anlamasına yardımcı olan teknik temelleri hazırlıyoruz. Arama sıralaması garantisi vermiyoruz.' },
+  { title: 'Temel SEO altyapısı', text: 'Sayfa başlıklarını, açıklamalarını ve arama motorlarının içeriği anlamasına yardımcı olan teknik temelleri hazırlıyoruz. Organik görünürlük ise zaman ve içerik çalışmasıyla gelişir.' },
   { title: 'Hızlı ve modern arayüz', text: 'Gereksiz görsel yükünü ve karmaşık etkileşimleri azaltarak sitenin rahat kullanılmasına odaklanıyoruz.' },
   { title: 'Yayına geçişte teknik destek', text: 'Son kontrollerde, alan adı bağlantısında ve yayın ayarlarında yardımcı oluyoruz. Alan adı ve barındırma maliyetlerini teklifte ayrıca netleştiriyoruz.' },
 ]
@@ -50,7 +50,7 @@ export default function CorporateWebsite() {
           </div>
         </section>
 
-        <section className="corporate-section corporate-surface" aria-labelledby="audience-title">
+        <section className="corporate-section corporate-surface corporate-section-compact" aria-labelledby="audience-title">
           <div className="page-container corporate-split">
             <div><p className="hero-eyebrow">Kimler için uygun?</p><h2 id="audience-title">İşletmenizi internette daha iyi anlatmak istediğinizde.</h2></div>
             <ul className="corporate-list">
@@ -73,6 +73,7 @@ export default function CorporateWebsite() {
                 </li>
               ))}
             </ul>
+            <a className="corporate-inline-link" href="/#iletisim">Projenizi konuşalım →</a>
           </div>
         </section>
 
@@ -94,7 +95,11 @@ export default function CorporateWebsite() {
 
         <section className="corporate-section" aria-labelledby="price-title">
           <div className="page-container corporate-split">
-            <div className="corporate-intro"><p className="hero-eyebrow">Bütçe ve kapsam</p><h2 id="price-title">Kurumsal web sitesi fiyatları neye göre değişir?</h2><p>Doğru teklif, ihtiyaç duyduğunuz işi tarif eder. Bu yüzden fiyatı tek bir pakete göre değil, birlikte belirlediğimiz kapsam üzerinden oluşturuyoruz.</p></div>
+            <div className="corporate-intro">
+              <p className="hero-eyebrow">Bütçe ve kapsam</p>
+              <h2 id="price-title">Kurumsal web sitesi fiyatları neye göre değişir?</h2>
+              <p>Her projeyi ihtiyacınıza göre fiyatlandırıyoruz. Sayfa sayısı, tasarım, özel fonksiyonlar, içerik hazırlığı ve yayın sonrası destek kapsamı toplam fiyatı belirler. İhtiyacınızı paylaştığınızda kapsamı netleştirip teklif sunuyoruz.</p>
+            </div>
             <dl className="corporate-factors">
               {priceFactors.map(item => (
                 <div key={item.title}>
@@ -104,11 +109,14 @@ export default function CorporateWebsite() {
               ))}
             </dl>
           </div>
+          <div className="page-container">
+            <a className="corporate-inline-link" href="/#iletisim">Projeniz için fiyat alın →</a>
+          </div>
         </section>
 
-        <section className="corporate-section corporate-surface" aria-labelledby="approach-title">
+        <section className="corporate-section corporate-surface corporate-section-compact" aria-labelledby="approach-title">
           <div className="page-container corporate-split">
-            <div><p className="hero-eyebrow">Neden Yalın Rota?</p><h2 id="approach-title">Ne yaptırdığınızı bilerek ilerleyin.</h2></div>
+            <div><p className="hero-eyebrow">Neden Yalın Rota?</p><h2 id="approach-title">Projenizin her adımını net şekilde bilin.</h2></div>
             <div className="corporate-prose"><p>Web sitesi kararları vermek için teknik terimlere hâkim olmanız gerekmez. Seçenekleri işletmenize katkılarıyla anlatır, gerekli olmayan özellikleri sırf eklenebildiği için kapsama almayız.</p><p>İletişimin doğrudan olduğu, mobil kullanımın baştan düşünüldüğü bir çalışma sunuyoruz. Yayından sonra ihtiyaç duyacağınız güncellemeler için de destek kapsamını birlikte planlayabiliriz.</p></div>
           </div>
         </section>
