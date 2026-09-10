@@ -8,7 +8,7 @@ const navigationLinks = [
   { label: 'SSS', href: '#sss' },
 ]
 
-export default function Header() {
+export default function Header({ homePath = '' }: { homePath?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
 
@@ -51,7 +51,7 @@ export default function Header() {
       }}
     >
       <div className="page-container header-inner">
-        <a className="brand-link" href="#top" onClick={() => closeMenu('#top')}>
+        <a className="brand-link" href={`${homePath}#top`} onClick={() => closeMenu('#top')}>
           <img className="brand-logo" src={logo} alt="Yalın Rota" width={2172} height={724} />
         </a>
         <button
@@ -76,11 +76,11 @@ export default function Header() {
           <ul className="navigation-links">
             {navigationLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} onClick={() => closeMenu(link.href)}>{link.label}</a>
+                <a href={`${homePath}${link.href}`} onClick={() => closeMenu(link.href)}>{link.label}</a>
               </li>
             ))}
           </ul>
-          <a className="button-primary" href="#iletisim" onClick={() => closeMenu('#iletisim')}>
+          <a className="button-primary" href={`${homePath}#iletisim`} onClick={() => closeMenu('#iletisim')}>
             İletişime Geç
           </a>
         </nav>

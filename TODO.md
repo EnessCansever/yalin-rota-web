@@ -1,5 +1,7 @@
 # Yapılacaklar
 
+- [x] Kurumsal web sitesi landing page'ini özgün içerik, ayrı HTML metadata'sı, ortak Header/Footer, iç bağlantı ve sitemap ile hazırla; yerel build/browser QA yap
+- [ ] Landing page yayını sonrasında Vercel temiz URL/redirect, refresh, canonical ve sitemap kontrolü yap; Search Console'da yeni URL'yi doğrula
 - [x] Proje kurallarını, ticari bağlamı ve proje hafızasını oluştur
 - [x] Site bilgi mimarisini ve temel içerik akışını belirle
 - [x] Gerçek duruma uygun çalışmalar / referans yaklaşımını belirle

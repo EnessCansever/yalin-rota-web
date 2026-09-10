@@ -4,6 +4,22 @@
       "source": "/index.html",
       "destination": "https://yalinrota.com.tr/",
       "permanent": true
+    },
+    {
+      "source": "/kurumsal-web-sitesi.html",
+      "destination": "/kurumsal-web-sitesi",
+      "permanent": true
+    },
+    {
+      "source": "/kurumsal-web-sitesi/",
+      "destination": "/kurumsal-web-sitesi",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/kurumsal-web-sitesi",
+      "destination": "/kurumsal-web-sitesi.html"
     }
   ]
 }

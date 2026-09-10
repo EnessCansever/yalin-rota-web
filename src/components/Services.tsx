@@ -47,6 +47,9 @@ export default function Services() {
               <span className="service-number" aria-hidden="true">{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
+              {service.id === 'kurumsal-web-sitesi' && (
+                <a className="service-detail-link" href="/kurumsal-web-sitesi">Kurumsal web sitesi hizmetini incele →</a>
+              )}
             </li>
           ))}
         </ul>

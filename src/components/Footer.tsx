@@ -8,7 +8,7 @@ const footerLinks = [
   { label: 'İletişim', href: '#iletisim' },
 ]
 
-export default function Footer() {
+export default function Footer({ homePath = '' }: { homePath?: string }) {
   const currentYear = new Date().getFullYear()
 
   return (
@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="page-container">
         <div className="footer-layout">
           <div>
-            <a className="brand-link" href="#top">
+            <a className="brand-link" href={`${homePath}#top`}>
               <img className="brand-logo" src={logo} alt="Yalın Rota" width={2172} height={724} />
             </a>
             <p className="footer-tagline">Web &amp; Dijital Çözümler</p>
@@ -24,7 +24,7 @@ export default function Footer() {
           <nav aria-label="Alt navigasyon">
             <ul className="footer-links" role="list">
               {footerLinks.map((link) => (
-                <li key={link.href}><a href={link.href}>{link.label}</a></li>
+                <li key={link.href}><a href={`${homePath}${link.href}`}>{link.label}</a></li>
               ))}
             </ul>
           </nav>

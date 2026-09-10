@@ -2,6 +2,8 @@
 
 ## Completed
 
+- İlk özgün hizmet landing page'i hazırlandı: kurumsal web sitesi için sekiz bölüm, ana sayfadan bağlantı, sayfaya özel ilk HTML metadata'sı ve sitemap kaydı eklendi
+- Landing page TypeScript/build, dev ve production preview doğrudan URL/refresh, 320/375/430/768/1024/1280/1440 px taşma, klavye/odak, reduced-motion ve bağlantı kontrolleri geçti; console/network hatası görülmedi. Bu değişiklikler henüz yayınlanmadı
 - Yalın Rota marka adı belirlendi
 - @yalinrota Instagram hesabı oluşturuldu
 - Yalın Rota için ayrı Google hesabı oluşturuldu
@@ -54,10 +56,11 @@
 
 ## Current Task
 
-- Milestone 14 — Production deployment and domain connection
+- Kurumsal web sitesi landing page'inin yayın sonrası URL ve SEO doğrulaması
 
 ## Next
 
+- Yeni /kurumsal-web-sitesi sayfasını kullanıcı yayını sonrasında Vercel'de doğrudan açılış, refresh, redirect, canonical ve sitemap açısından doğrula
 - Gerçek cihazlar, Safari/Firefox ve ekran okuyucuyla ek yayın kontrolü
 - Hosting sağlayıcısının belirlenmesi ve production deployment
 - yalinrota.com.tr domaininin satın alınması ve bağlanması (henüz satın alınmadı / bağlanmadı)
@@ -68,6 +71,9 @@
 
 ## Decisions
 
+- İlk hizmet landing page'i /kurumsal-web-sitesi için ayrı Vite HTML girişi kullanılıyor. Metadata ilk HTML'de, görünür içerik React ile render ediliyor; router veya yeni dependency eklenmedi
+- Header/Footer homePath prop'u ile paylaşılıyor. Landing page iletişim ve ortak navigasyon bağlantıları ana sayfaya dönüyor; SSS native details/summary kullanıyor
+- Vercel yalnızca yeni temiz URL'yi ilgili HTML dosyasına rewrite ediyor; .html ve sondaki slash varyantları temiz URL'ye kalıcı yönleniyor. Canlı doğrulama deployment sonrasında yapılacak
 - React kullanılacak
 - TypeScript kullanılacak
 - Vite kullanılacak

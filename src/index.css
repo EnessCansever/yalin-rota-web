@@ -456,6 +456,17 @@
   color: #52605a;
 }
 
+.service-detail-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: 0.75rem;
+  color: #176b55;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
 @media (min-width: 48rem) {
   .services {
     padding-block: 5rem;
