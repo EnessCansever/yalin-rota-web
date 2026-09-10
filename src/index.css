@@ -27,11 +27,16 @@
   margin-inline: auto;
 }
 
+html {
+  /* Kapalı header yüksekliği; bölümün mevcut scroll-margin'i ek boşluk bırakır. */
+  scroll-padding-top: calc(4.5rem + 1px);
+}
+
 .skip-link {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: 1rem;
-  z-index: 1;
+  z-index: 21;
   padding: 0.75rem 1.25rem;
   background: #fff;
   color: #176b55;
@@ -43,6 +48,9 @@
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   background: #fff;
   border-bottom: 1px solid #d8dfda;
 }
@@ -328,6 +336,10 @@
 }
 
 @media (min-width: 64rem) {
+  html {
+    scroll-padding-top: calc(5rem + 1px);
+  }
+
   .page-container {
     width: calc(100% - 5rem);
   }
