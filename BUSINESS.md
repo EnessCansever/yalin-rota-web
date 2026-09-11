@@ -5,8 +5,9 @@
 - **Marka:** Yalın Rota
 - **Instagram:** @yalinrota
 - **Google hesabı:** Yalın Rota için ayrı bir hesap oluşturuldu.
-- **Planlanan domain:** yalinrota.com.tr
-- **Domain durumu:** Henüz satın alınmadı. Site yayınlanmaya hazır hale geldiğinde satın alınacak ve bağlanacak.
+- **Aktif production sitesi:** https://yalinrota.com.tr/
+- **Domain durumu:** Satın alındı ve Vercel yayınına bağlandı; www adresi apex domaine 308 ile yönleniyor.
+- **Yayın:** Vercel üzerinde repository’nin main branch’i production deploy kaynağıdır.
 - **Pazar:** Türkiye
 - **Dil:** Türkçe
 - **Hedef müşteri:** Küçük ve orta ölçekli işletmeler.

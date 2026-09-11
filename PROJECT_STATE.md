@@ -1,12 +1,29 @@
 # Project State
 
+## Release Status
+
+- V1 production-ready ve release-complete; final production audit sonucu: **READY FOR V1 CLOSE**
+- Production: https://yalinrota.com.tr/ — Vercel, repository’nin main branch’inden production deploy
+- Canlı canonical sayfalar:
+  - https://yalinrota.com.tr/
+  - https://yalinrota.com.tr/kurumsal-web-sitesi
+  - https://yalinrota.com.tr/web-sitesi-yenileme
+
 ## Completed
+
+- Domain satın alındı, Vercel’e bağlandı ve üç canonical sayfa production’da yayınlandı
+- Final canlı audit: üç sayfa 200; HTTPS, www → apex (path korunarak 308), index.html ve landing .html/son slash → temiz URL yönlendirmeleri doğrulandı; loop yok, olmayan URL gerçek 404 dönüyor
+- Canonical, robots.txt, yalnızca üç canonical URL içeren sitemap.xml, Organization + WebSite JSON-LD, sayfaya özel OG ve Twitter/X metadata tamamlandı; gerçek og-image.png production’da yayınlanıyor
+- Kullanıcının doğruladığı Search Console durumu: domain property doğrulandı, sitemap gönderildi; ana sayfa, /kurumsal-web-sitesi ve /web-sitesi-yenileme için indeksleme istekleri gönderildi. Gerçek Google indeks sonucu bu işlemlerden çıkarılmıyor
+- Canlı üç sayfa Chrome’da 320/375/430/768/1024/1280/1440 px responsive kontrolünü geçti; sticky header, mobil menü, hash navigation, landing → iletişim tek tıklama ve doğrudan hash refresh doğrulandı
+- Canlı FAQ erişilebilirliği ve iki proje lightbox’ının klavye, Escape, backdrop, focus trap/restore ve scroll lock kontrolleri geçti; favicon/manifest ve görseller doğru MIME ile 200 döndü
+- Final audit kapsamında TypeScript, production build ve git diff --check başarılı; testlerde console error/warning veya beklenmeyen ağ hatası bulunmadı
 
 - İkinci hizmet landing page'i /web-sitesi-yenileme için özgün dokuz bölüm, ayrı Vite HTML/React girişi, sayfaya özel metadata ve sitemap kaydı hazırlandı; Header/Footer ve mevcut corporate.css paylaşılıyor
 - Yenileme sayfası TypeScript/build, dev/production preview temiz URL ve refresh, 320/375/768/1024/1440 px responsive, klavye/odak, reduced-motion ve 30 CTA geçişi kontrollerini geçti; console/network hatası yok
 - Sticky header için iki sayfada görünürlük, layout jump, mobil menü ve ana sayfanın beş hash hedefi kontrol edildi. Header altındaki scroll offset ve ilk mount hash çözümü birlikte çalışıyor
 - İlk özgün hizmet landing page'i hazırlandı: kurumsal web sitesi için sekiz bölüm, ana sayfadan bağlantı, sayfaya özel ilk HTML metadata'sı ve sitemap kaydı eklendi
-- Landing page TypeScript/build, dev ve production preview doğrudan URL/refresh, 320/375/430/768/1024/1280/1440 px taşma, klavye/odak, reduced-motion ve bağlantı kontrolleri geçti; console/network hatası görülmedi. Bu değişiklikler henüz yayınlanmadı
+- Landing page TypeScript/build, dev ve production preview doğrudan URL/refresh, 320/375/430/768/1024/1280/1440 px taşma, klavye/odak, reduced-motion ve bağlantı kontrolleri geçti; console/network hatası görülmedi. Yayın sonrası kontroller de final production audit kapsamında tamamlandı
 - Yalın Rota marka adı belirlendi
 - @yalinrota Instagram hesabı oluşturuldu
 - Yalın Rota için ayrı Google hesabı oluşturuldu
@@ -55,30 +72,27 @@
 - Dev ve production preview'da console error/warning, beklenmeyen ağ hatası veya layout shift kaydedilmedi; yedi favicon/manifest dosyası doğru MIME ile 200 döndü, manifest ve SEO alanları doğrulandı
 - Milestone 13 TypeScript ve production build geçti: JS 209.96 kB (gzip 65.52 kB), CSS 19.71 kB (gzip 4.53 kB); dist içindeki HTML asset hedefleri mevcut
 - Secret/API key, kişisel telefon, demo kalıntısı, kullanılmayan import/CSS veya gereksiz dependency tespit edilmedi; doğrulanmış bir uygulama sorunu bulunmadığından mevcut UI ve kaynak kod korundu
-- Standart static deployment hazırlığı doğrulandı; hosting sağlayıcısı seçilmedi ve yayın yapılmadı
+- Standart static deployment hazırlığı doğrulandı; ardından Vercel production yayını tamamlandı
 
 ## Current Task
 
-- Hizmet landing page'lerinin yayın sonrası URL, yönlendirme ve SEO doğrulaması
+- V1 release kapanışı tamamlandı; sonraki odak production takibi ve ilk ücretli müşteriyi kazanma
 
-## Next
+## Next — Post-v1 / Later
 
-- Yeni /web-sitesi-yenileme sayfasını yayınla; temiz URL, .html/slash redirect, www yönlendirmesi, sitemap ve Search Console kontrolünü canlıda tamamla (yerel testler geçti; canlı URL henüz 404)
-- Yeni /kurumsal-web-sitesi sayfasını kullanıcı yayını sonrasında Vercel'de doğrudan açılış, refresh, redirect, canonical ve sitemap açısından doğrula
-- Gerçek cihazlar, Safari/Firefox ve ekran okuyucuyla ek yayın kontrolü
-- Hosting sağlayıcısının belirlenmesi ve production deployment
-- yalinrota.com.tr domaininin satın alınması ve bağlanması (henüz satın alınmadı / bağlanmadı)
-- Canlı yayında HTTPS, asset, anchor ve iletişim bağlantılarının kontrolü
-- Gerçek Open Graph paylaşım görselinin hazırlanması
-- Aktif production domainiyle canonical, og:url ve gerçek paylaşım görseliyle og:image yapılandırılması
-- Search Console ve indexing kontrolü
+- Search Console’da gerçek indeks durumunu, arama performansını ve tarama sorunlarını izle
+- Instagram içerikleri ve müşteri kazanım çalışmalarına odaklan
+- Gerçek müşteri projeleri oluştukça izinli case study’ler hazırla
+- Yeni hizmet landing page’lerini yalnızca ihtiyaç veya veri oluşursa değerlendir
+- OG görselini kaliteyi koruyarak optimize etmeyi değerlendir
+- Gerçek cihazlar, Safari/Firefox ve ekran okuyucuyla ek kontrol yap
 
 ## Decisions
 
 - /web-sitesi-yenileme mevcut çok sayfalı Vite build'ine üçüncü HTML girişi olarak eklendi; yeni dependency veya ayrı CSS üretilmedi. Vercel'de yalnızca bu hizmetin temiz URL rewrite'ı ve .html/slash kalıcı redirect'leri eklendi
 - İlk hizmet landing page'i /kurumsal-web-sitesi için ayrı Vite HTML girişi kullanılıyor. Metadata ilk HTML'de, görünür içerik React ile render ediliyor; router veya yeni dependency eklenmedi
 - Header/Footer homePath prop'u ile paylaşılıyor. Landing page iletişim ve ortak navigasyon bağlantıları ana sayfaya dönüyor; SSS native details/summary kullanıyor
-- Vercel yalnızca yeni temiz URL'yi ilgili HTML dosyasına rewrite ediyor; .html ve sondaki slash varyantları temiz URL'ye kalıcı yönleniyor. Canlı doğrulama deployment sonrasında yapılacak
+- Vercel yalnızca yeni temiz URL'yi ilgili HTML dosyasına rewrite ediyor; .html ve sondaki slash varyantları temiz URL'ye kalıcı yönleniyor. Temiz URL ve redirect davranışı canlıda doğrulandı
 - React kullanılacak
 - TypeScript kullanılacak
 - Vite kullanılacak
@@ -89,10 +103,10 @@
 - İçerik Türkçe olacak
 - Mobil deneyim öncelikli olacak
 - Sahte müşteri/referans kullanılmayacak
-- Domain site yayınlanmaya hazır hale geldikten sonra satın alınacak
+- Production canonical domain https://yalinrota.com.tr/; domain satın alındı ve bağlandı
 - Geliştirme küçük milestone'larla ilerleyecek; sonraki aşama kullanıcının açık talebiyle başlayacak
 - Commit ve push işlemleri kullanıcı tarafından manuel yapılacak
-- İlk sürüm tek sayfalı olacak; bilgi mimarisi ve içerik taslakları SITE_PLAN.md içinde tutulacak
+- V1, ana sayfa ve iki hizmet landing page’inden oluşan Vite multi-page yapısıdır; ilk tek sayfa planı hizmet sayfalarıyla genişletildi
 - Güven/değer önerisi ve Neden Yalın Rota içeriği tek bölümde birleştirilecek
 - Seçilmiş Çalışmalar bölümünde kurucunun geliştirdiği Fixora ve JobFit TR sınırlı biçimde sunulacak; Yalın Rota müşteri işi olmadıkları açıkça belirtilecek
 - İlk sürüm iletişim kanalları Instagram @yalinrota ve e-posta yalinrota@gmail.com olacak
@@ -101,9 +115,9 @@
 - Görsel kararlar DESIGN_SYSTEM.md içinde tutulacak; açık nötr zemin ve tek accent olarak koyu petrol yeşili kullanılacak
 - Sistem sans-serif fontu korunuyor; header/footer artık onaylanmış yatay PNG logoyu kullanıyor. Mobil header 144 px, desktop 162 px, footer 138 px; doğal 3:1 oran ve intrinsic boyutlar korunuyor
 - Hero tipografi ağırlıklı; masaüstünde dekoratif HTML/CSS browser önizlemesiyle iki kolon, mobilde yalnızca metin ve CTA'lar kullanılıyor
-- Header normal sayfa akışında olacak; mobil navigasyon altında açılan basit bir liste olarak uygulanacak
-- Ana sayfa, gerçek screenshot entegrasyonu, branding, temel SEO, README ve Milestone 13 Chrome release QA tamamlandı; ek tarayıcı/cihaz kontrolleri ve yayın işlemleri sırada
-- Standart static yayın için build komutu npm run build, çıktı dizini dist/ olacak. Mevcut asset yolları site kökünde yayın varsayıyor; anchor tabanlı tek sayfa için uygulama sunucusu, ortam değişkeni veya route rewrite gerekmiyor. Hosting sağlayıcısı henüz seçilmedi
+- Header position: sticky ile üstte kalır; mobil navigasyon altında açılan basit listedir. Hash hedefleri için header offset’i korunur
+- Ana sayfa, iki landing page, gerçek screenshot’lar, branding, production SEO, README ve final canlı Chrome QA tamamlandı; ek tarayıcı/cihaz kontrolleri post-v1 takibidir
+- Vercel production kaynağı main branch’tir; build komutu npm run build, çıktı dizini dist/. Site kökünde static yayın ve landing page temiz URL’leri için mevcut Vercel rewrite/redirect kuralları kullanılır
 - Milestone 9 talebine göre Faq.tsx altı soruyu aynı anda tek yanıt açılan React state kontrollü accordion olarak sunuyor; önceki açık soru-cevap taslağının yerini aldı
 - Contact.tsx petrol yeşili yüzeyde Gmail compose ve Instagram profil bağlantılarını yeni sekmede sunuyor; footer e-postası mailto olarak kaldı. Form, telefon ve WhatsApp eklenmedi
 - Footer.tsx marka, beş bölüm bağlantısı, gerçek iletişim kanalları ve JavaScript ile güncel yılı gösteriyor
@@ -126,12 +140,14 @@
 - Mobil menü 64rem altında açılan liste; hero CTA'ları 30rem altında alt alta, içerik en fazla 70rem genişliğinde
 - npm run build önce TypeScript kontrolünü, ardından production build işlemini çalıştırıyor; npm run dev ve npm run preview komutları mevcut
 - README geliştirici odaklı kısa kurulum/build bilgilerini içeriyor; Vite demo içerikleri bulunmuyor
-- Aktif domain ve paylaşım görseli hazır olmadan canonical, og:url ve og:image eklenmeyecek; favicon seti ve manifest Milestone 12’de eklendi
-- Header ve footer marka bağlantıları #top hedefine gider; mevcut navigasyon, içerikler ve lightbox korunur
+- Canonical ve og:url her sayfanın production URL’sini kullanır; ortak og:image https://yalinrota.com.tr/og-image.png adresindedir. Favicon seti ve manifest aktif olarak yayınlanır
+- Header ve footer marka bağlantıları ana sayfada #top, landing page’lerde /#top hedefine gider
 - Favicon türevleri mevcut Pillow ile üretildi; Y şekli kaynak alpha kanalından gelir. Beyaz sembol, #176B55 yuvarlatılmış kare içinde yaklaşık %70 genişlik kaplar. Kaynak logo/mark PNG’leri değiştirilmedi
 
 ## Known Issues
 
 - Test edilen kapsamda yayını engelleyen bir uygulama hatası bulunmadı
 - Chrome kontrolleri gerçek cihaz, Safari/Firefox veya ekran okuyucu testi yerine geçmez; bu ek kontroller henüz tamamlanmadı
-- Production deployment ve domain satın alma/bağlantısı henüz yapılmadı; canonical, og:url ve gerçek paylaşım görseline bağlı og:image bekliyor
+- Search Console’a erişim olmadan gerçek indeks sonucu doğrulanmadı; gönderilmiş indeksleme isteği, indekslenme veya sıralama garantisi değildir
+- Gmail alıcısı giriş yönlendirmesinde doğrulandı; oturum açılmış compose ekranı test edilmedi
+- OG görseli yaklaşık 1,58 MB; kaliteyi koruyan optimizasyon isteğe bağlıdır
