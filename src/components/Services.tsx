@@ -50,6 +50,9 @@ export default function Services() {
               {service.id === 'kurumsal-web-sitesi' && (
                 <a className="service-detail-link" href="/kurumsal-web-sitesi">Kurumsal web sitesi hizmetini incele →</a>
               )}
+              {service.id === 'web-sitesi-yenileme' && (
+                <a className="service-detail-link" href="/web-sitesi-yenileme">Web sitesi yenileme hizmetini incele →</a>
+              )}
             </li>
           ))}
         </ul>

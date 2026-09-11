@@ -1,5 +1,7 @@
 # Yapılacaklar
 
+- [x] Web sitesi yenileme landing page'ini özgün içerik, mevcut ortak stiller, ilk HTML metadata'sı, iç bağlantılar ve sitemap kaydıyla hazırla; build/browser QA yap
+- [ ] /web-sitesi-yenileme yayını sonrasında temiz URL, .html/slash redirect, www, sitemap ve Search Console kontrolünü yap
 - [x] Kurumsal web sitesi landing page'ini özgün içerik, ayrı HTML metadata'sı, ortak Header/Footer, iç bağlantı ve sitemap ile hazırla; yerel build/browser QA yap
 - [ ] Landing page yayını sonrasında Vercel temiz URL/redirect, refresh, canonical ve sitemap kontrolü yap; Search Console'da yeni URL'yi doğrula
 - [x] Proje kurallarını, ticari bağlamı ve proje hafızasını oluştur

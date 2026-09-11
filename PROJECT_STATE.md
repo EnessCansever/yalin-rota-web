@@ -2,6 +2,9 @@
 
 ## Completed
 
+- İkinci hizmet landing page'i /web-sitesi-yenileme için özgün dokuz bölüm, ayrı Vite HTML/React girişi, sayfaya özel metadata ve sitemap kaydı hazırlandı; Header/Footer ve mevcut corporate.css paylaşılıyor
+- Yenileme sayfası TypeScript/build, dev/production preview temiz URL ve refresh, 320/375/768/1024/1440 px responsive, klavye/odak, reduced-motion ve 30 CTA geçişi kontrollerini geçti; console/network hatası yok
+- Sticky header için iki sayfada görünürlük, layout jump, mobil menü ve ana sayfanın beş hash hedefi kontrol edildi. Header altındaki scroll offset ve ilk mount hash çözümü birlikte çalışıyor
 - İlk özgün hizmet landing page'i hazırlandı: kurumsal web sitesi için sekiz bölüm, ana sayfadan bağlantı, sayfaya özel ilk HTML metadata'sı ve sitemap kaydı eklendi
 - Landing page TypeScript/build, dev ve production preview doğrudan URL/refresh, 320/375/430/768/1024/1280/1440 px taşma, klavye/odak, reduced-motion ve bağlantı kontrolleri geçti; console/network hatası görülmedi. Bu değişiklikler henüz yayınlanmadı
 - Yalın Rota marka adı belirlendi
@@ -56,10 +59,11 @@
 
 ## Current Task
 
-- Kurumsal web sitesi landing page'inin yayın sonrası URL ve SEO doğrulaması
+- Hizmet landing page'lerinin yayın sonrası URL, yönlendirme ve SEO doğrulaması
 
 ## Next
 
+- Yeni /web-sitesi-yenileme sayfasını yayınla; temiz URL, .html/slash redirect, www yönlendirmesi, sitemap ve Search Console kontrolünü canlıda tamamla (yerel testler geçti; canlı URL henüz 404)
 - Yeni /kurumsal-web-sitesi sayfasını kullanıcı yayını sonrasında Vercel'de doğrudan açılış, refresh, redirect, canonical ve sitemap açısından doğrula
 - Gerçek cihazlar, Safari/Firefox ve ekran okuyucuyla ek yayın kontrolü
 - Hosting sağlayıcısının belirlenmesi ve production deployment
@@ -71,6 +75,7 @@
 
 ## Decisions
 
+- /web-sitesi-yenileme mevcut çok sayfalı Vite build'ine üçüncü HTML girişi olarak eklendi; yeni dependency veya ayrı CSS üretilmedi. Vercel'de yalnızca bu hizmetin temiz URL rewrite'ı ve .html/slash kalıcı redirect'leri eklendi
 - İlk hizmet landing page'i /kurumsal-web-sitesi için ayrı Vite HTML girişi kullanılıyor. Metadata ilk HTML'de, görünür içerik React ile render ediliyor; router veya yeni dependency eklenmedi
 - Header/Footer homePath prop'u ile paylaşılıyor. Landing page iletişim ve ortak navigasyon bağlantıları ana sayfaya dönüyor; SSS native details/summary kullanıyor
 - Vercel yalnızca yeni temiz URL'yi ilgili HTML dosyasına rewrite ediyor; .html ve sondaki slash varyantları temiz URL'ye kalıcı yönleniyor. Canlı doğrulama deployment sonrasında yapılacak

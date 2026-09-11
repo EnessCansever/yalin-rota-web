@@ -14,12 +14,26 @@
       "source": "/kurumsal-web-sitesi/",
       "destination": "/kurumsal-web-sitesi",
       "permanent": true
+    },
+    {
+      "source": "/web-sitesi-yenileme.html",
+      "destination": "/web-sitesi-yenileme",
+      "permanent": true
+    },
+    {
+      "source": "/web-sitesi-yenileme/",
+      "destination": "/web-sitesi-yenileme",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/kurumsal-web-sitesi",
       "destination": "/kurumsal-web-sitesi.html"
+    },
+    {
+      "source": "/web-sitesi-yenileme",
+      "destination": "/web-sitesi-yenileme.html"
     }
   ]
 }

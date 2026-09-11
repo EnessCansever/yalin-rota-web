@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     rolldownOptions: {
-      input: ['index.html', 'kurumsal-web-sitesi.html'],
+      input: ['index.html', 'kurumsal-web-sitesi.html', 'web-sitesi-yenileme.html'],
     },
   },
 })
